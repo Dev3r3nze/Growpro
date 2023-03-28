@@ -1,79 +1,80 @@
+/* -------------------Global------------------- */
 *{
     font-family: 'Poppins';
-
 }
+
 body{
     background-color: #E5E5E5;
 }
-#bckimg{
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-}
-#headerLogo{
-    background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
-    height: 70px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-#logoImg{
-    height: 30%;
-    margin-left: 4vh;
+
+a{
+    color: #7A33CC;
 }
 
-#headerText{
-    background-image: url("../Recursos/HeaderImg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translateY(-59px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    color: white;
-    padding: 8%;
-}
-.App-header{
-    height: 530px;
-}
-#headerTitle{
-    font-style: normal;
+
+/* -------------------Texts------------------- */
+.textStrong, #headerTitle, .topVentas p, .cardTitle, #titleInfoStrong, .titleInfo{
     font-weight: 700;
-    font-size: 50px;
-    line-height: 70px;
 }
 
-#titleSpecial{
-    background: #FF5766;
-    border-radius: 50px;
-    padding: 0 13px;
+.textGrande{
+    font-size: 42px;
+    line-height: 56px;
+    color: #2F343D;
 }
-#btnHeader{
-    margin-top: 3vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+.textTiny{
+    font-size: 14px;
+}
+
+.textFino{
+    font-weight: 400;
+    color: #2F343D;
+}
+
+.textMedio{
+    font-weight: 500;
+}
+
+.textPequeño{
+    font-size: 18px;
+    line-height: 30px;
+    color: #2F343D;
+}
+
+.textMuyPeque{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+
+    color: #2F343D;
+}
+
+.textMediano{
+    font-size: 30px;
+    line-height: 42px;
+}
+
+
+/* -------------------Otros elementos comunes------------------- */
+.btnPrincipal{
     padding: 20px 30px;
-    background: #FFFFFF;
+    width: auto;
+    color:#FFFFFF;
+    background: #7A33CC;
     border-radius: 50px;
     border: 0;
 }
-#btnHeader p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 0;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
 
-    color: #7A33CC;
+.dividerText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-top: 7vh;
 }
 
 .section{
@@ -85,6 +86,85 @@ body{
     width: 90%;
     flex-direction: column;
 }
+
+
+/* -------------------Header------------------- */
+#bckimg{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+#headerLogo{
+    background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+#logoImg{
+    height: 30%;
+    margin-left: 4vh;
+}
+
+#headerText{
+    background-image: url("../Recursos/HeaderImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-60px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    padding: 8%;
+}
+
+#headerTitle{
+    line-height: 70px;
+    font-size: 50px;
+}
+
+.App-header{
+    height: 530px;
+}
+
+#titleSpecial{
+    background: #FF5766;
+    border-radius: 50px;
+    padding: 0 13px;
+}
+
+#btnHeader{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.btnHeader.mostrar {
+    opacity: 1;
+  }
+
+#btnHeader p {
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #7A33CC;
+}
+
+/* -------------------Sección fomulario------------------- */
 #firstSectionRow{
     align-items: center;
 }
@@ -94,41 +174,22 @@ body{
     flex-direction: column;
     align-items: flex-start;
     padding: 40px 30px;
-    gap: 24px;
     background: #FFFFFF;
     border-radius: 20px;
     filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.15));
     margin-right: 3vh;
 }
 
-#titleForm{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 56px;
-}
-#titleForm strong{
-    font-weight: 700;
-}
-
 .checksForm img{
     margin-right: 1vh;
 }
-.checksForm p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-}
+
 .section{
     display: flex;
-    
 }
+
 form label{
     margin-top: 2vh;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
     letter-spacing: 0.4px;
     color: #2F343D;     
 }
@@ -142,20 +203,25 @@ form input, form select{
     border-radius: 10px;
     width: 100%;
 }
+
 form select{
     -webkit-appearance: none;
+    appearance: none;
     background-image: url("../Recursos/Vector.png");
     background-repeat: no-repeat;
     background-position: right 35px bottom 28px;
     padding-right: 25px;
 }
+
 #inputCorreo{
     width: 100%;
 }
+
 #termsText{
     margin: 0;
     margin-left: 1vh;
 }
+
 #checkTerms{
     -webkit-appearance: none;
     appearance: none;
@@ -165,19 +231,19 @@ form select{
     padding: 0;
     border-radius: 3px;
 }
+
 #checkTerms:checked{
     background-image: url("../Recursos/checkBk.png");
     background-size: cover;
 }
+
 #colTerms{
     margin-top: 2vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-a{
-    color: #7A33CC;
-}
+
 #rowSend{
     margin-top: 3vh;
     display: flex;
@@ -187,63 +253,38 @@ a{
     width: 100%;
 }
 
-#btnForm{
-    padding: 20px 30px;
-    gap: 10px;
-    width: auto;
-    color:#FFFFFF;
-    background: #7A33CC;
-    border-radius: 50px;
-    border: 0;
-}
 #btnForm p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
     margin-bottom: 0;
     letter-spacing: 0.05em;
-
     color: #FFFFFF;
 }
+
+
+/* -------------------Sección experiencias------------------- */
 
 #sectionExp{
     text-align: left;
     align-items: flex-start;
 }
 
-#titleSectionExp{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 56px;
-    color: #2F343D;
-}
-#titleSectionExp span{
-    font-weight: 700;
-}
-#descSectionExp{
-   font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    color: #2F343D;
-
-}
 .card{
     display: flex;
     align-items: center;
     justify-content: center;
     border: 0;
-    border-radius: 23px;
+    border-radius: 50px 50px 20px 20px;
     filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.1));
+    background: #ffffff00;
 }
-
+.cardFondo{
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
 
 .cardOff{
     font-style: normal;
     font-weight: 800;
-    font-size: 14px;
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;
@@ -251,14 +292,14 @@ a{
     transform: translateY(-15vh);
     background: #2F343D;
     border: 1px solid #FFFFFF;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 20px 0 0 20px;
     padding: 0.5vh 1vh;
     position: absolute;
 }
 
 .topVentas{
     background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0 0;
     width: 100%;
     text-align: center;
     padding: 2px 35px;
@@ -266,10 +307,9 @@ a{
     z-index: 1;
     top: 0;
 }
+
 .topVentas p{
     font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
     line-height: 30px;
     color: #FFFFFF;
     margin: 0;
@@ -277,41 +317,34 @@ a{
 
 .cardBody{
     padding: 20px 30px 25px;
-
     display: flex;
     flex-direction: column;
 }
+
 .cardTitle{
     font-style: normal;
-    font-weight: 700;
     font-size: 22px;
     line-height: 30px;
     color: #2F343D;
 }
+
 .precioCard{
     font-style: normal;
-    font-weight: 500;
+    
     font-size: 16px;
     line-height: 22px;
     color: #878787;
 }
-.precioCard span{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 22px;
-    color: #5D338D;
-}
+
 .btnCard{
     background: #7A33CC;
     border-radius: 500px;
     border: 0;
     padding: 1vh;
 }
+
 .btnCard p {
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.05em;
@@ -319,16 +352,15 @@ a{
     color: #FFFFFF;
     margin: 0;
 }
+
 .verMasCard{
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
     line-height: 30px;
     display: flex;
     align-items: center;
     letter-spacing: 0.05em;
     color: #7A33CC;
-    margin: 0vh;
+    margin: 0;
 }
 
 .verMasIcon{
@@ -340,6 +372,7 @@ a{
     border: 1px solid #878787;
     margin: 2vh 0;
 }
+
 .validezText{
     font-style: normal;
     font-weight: 600;
@@ -347,9 +380,10 @@ a{
     line-height: 30px;
     display: flex;
     align-items: center;
-    margin: 0vh;
+    margin: 0;
     color: #5D338D;
 }
+
 .validezIcon{
     width: 15px;
     margin-right: 1vh;
@@ -361,25 +395,20 @@ a{
     flex-direction: row;
     align-items: center;
 }
+
 .validezDiv{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 #segundaRowExps{
     display: flex;
-
 }
 
+/* -------------------Sección que hace diferente------------------- */
 #titleInfo,#titleInfoStrong{
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 56px;
-    color: #2F343D;
     margin: 0;
-}
-#titleInfoStrong{
-    font-weight: 700;
 }
 
 .infoCard{
@@ -388,29 +417,78 @@ a{
     justify-content: center;
     align-items: flex-start;
     padding: 30px 45px;
-    gap: 16px;
     background: #FFFFFF;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
+
+.cardRow{
+    width: 100%;
+}
+
 .titleInfo{
-    font-weight: 700;
     font-size: 20px;
     line-height: 32px;
     margin: 0;
 }
 
+/* -------------------Divider + CTA------------------- */
 #titleYMás{
     margin-top: 5vh;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 56px;
 }
+
 #ymasDesc{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
+    width: 70%;
     text-align: center;
+}
+
+
+/* -------------------Sección vídeo------------------- */
+#videoDiv{
+    width: 100%;
+}
+
+#videoDiv div{
+    display: flex;
+    justify-content: flex-end
+}
+
+#videoDiv div img{
+    margin: 1vh 0 0 3vh;
+}
+
+#titleVideo{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+#videoText{
+    text-align: center;
+}
+
+#descVideo{
+    width: 80%;
+    margin: auto;
+}
+#video{
+    margin-top: 3vh;
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+/* -------------------Footer------------------- */
+footer{
+    margin-top: 10vh;
+    display: flex;
+    height: 5vh;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(217, 217, 217, 0.3);
+    border: 1px solid #D9D9D9;
+}
+footer p,footer a{
+    margin: 0;
+    text-decoration: none;
 }
