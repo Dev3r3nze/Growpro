@@ -5,6 +5,7 @@
 
 body{
     background-color: #E5E5E5;
+    
 }
 
 a{
@@ -29,7 +30,6 @@ a{
 
 .textFino{
     font-weight: 400;
-    color: #2F343D;
 }
 
 .textMedio{
@@ -46,7 +46,6 @@ a{
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.05em;
-
     color: #2F343D;
 }
 
@@ -55,6 +54,9 @@ a{
     line-height: 42px;
 }
 
+.ancho{
+    width: 100%;
+}
 
 /* -------------------Otros elementos comunes------------------- */
 .btnPrincipal{
@@ -93,7 +95,6 @@ a{
     position: absolute;
     top: 0;
     z-index: -1;
-    width: 100%;
 }
 
 #headerLogo{
@@ -103,6 +104,7 @@ a{
     align-items: center;
     position: relative;
     z-index: 1;
+    justify-content: space-between;
 }
 
 #logoImg{
@@ -114,15 +116,14 @@ a{
     background-image: url("../Recursos/HeaderImg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateY(-60px);
-    height: 100%;
+    transform: translateY(-63px);
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     color: white;
-    padding: 8%;
 }
 
 #headerTitle{
@@ -140,7 +141,13 @@ a{
     padding: 0 13px;
 }
 
-#btnHeader{
+#btnHeaderMobile{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 10px;
+}
+
+.btnHeaderStyle{
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
@@ -157,12 +164,23 @@ a{
     opacity: 1;
   }
 
-#btnHeader p {
+.btnHeaderStyle p {
     margin-bottom: 0;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #7A33CC;
 }
+
+@media only screen and (max-width: 600px) {
+    #headerLogo {
+      position: fixed;
+      z-index: 2;
+    }
+    #btnHeaderMobile{
+        display: flex;
+    }
+  }
+
 
 /* -------------------Sección fomulario------------------- */
 #firstSectionRow{
@@ -182,10 +200,6 @@ a{
 
 .checksForm img{
     margin-right: 1vh;
-}
-
-.section{
-    display: flex;
 }
 
 form label{
@@ -213,9 +227,6 @@ form select{
     padding-right: 25px;
 }
 
-#inputCorreo{
-    width: 100%;
-}
 
 #termsText{
     margin: 0;
@@ -250,7 +261,6 @@ form select{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 #btnForm p {
@@ -264,7 +274,6 @@ form select{
 
 #sectionExp{
     text-align: left;
-    align-items: flex-start;
 }
 
 .card{
@@ -278,7 +287,6 @@ form select{
 }
 .cardFondo{
     background-color: #FFFFFF;
-    width: 100%;
     border-radius: 0 0 20px 20px;
 }
 
@@ -289,18 +297,17 @@ form select{
     text-align: center;
     color: #FFFFFF;
     align-self: flex-end;
-    transform: translateY(-15vh);
+    transform: translateY(-13vh);
     background: #2F343D;
     border: 1px solid #FFFFFF;
     border-radius: 20px 0 0 20px;
-    padding: 0.5vh 1vh;
+    padding: 0.1vh 1vh;
     position: absolute;
 }
 
 .topVentas{
     background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
     border-radius: 20px 20px 0 0;
-    width: 100%;
     text-align: center;
     padding: 2px 35px;
     position: absolute;
@@ -421,9 +428,8 @@ form select{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
-
-.cardRow{
-    width: 100%;
+.infoCard *{
+    margin: 1vh 0;
 }
 
 .titleInfo{
@@ -445,13 +451,15 @@ form select{
 
 /* -------------------Sección vídeo------------------- */
 #videoDiv{
-    width: 100%;
+    text-align: center;
+    margin-top: 4vh;
 }
 
 #videoDiv div{
     display: flex;
     justify-content: flex-end
 }
+
 
 #videoDiv div img{
     margin: 1vh 0 0 3vh;
@@ -471,12 +479,48 @@ form select{
     width: 80%;
     margin: auto;
 }
+
 #video{
     margin-top: 3vh;
     border-radius: 20px;
-    width: 100%;
+    
 }
 
+#videoFullScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(28,28,28,.19);
+    backdrop-filter: blur(6px);
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+#videoContainer{
+    max-width: 1280px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+#videoClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.341);
+    margin-bottom: -2vh;
+}
 
 /* -------------------Footer------------------- */
 footer{

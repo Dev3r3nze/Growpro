@@ -1,47 +1,29 @@
 import './App.css'
 
-// Obtener el botón y la posición de la ventana
-var boton = document.querySelector('#btnHeader');
-var posicionDesplazar = 20;
-
-// Escuchar el evento de scroll
-window.addEventListener('scroll', function() {
-  // Obtener la posición actual del scroll
-  var posicionActual = window.pageYOffset;
-
-  // Mostrar el botón si la posición actual es mayor que la posición de la ventana
-  if (posicionActual > posicionDesplazar) {
-    boton.style.display = 'flex';
-    boton.classList.add('mostrar');
-  } else {
-    boton.style.display = 'none';
-    boton.classList.remove('mostrar');
-  }
-})
 
 function App () {
     return (
         <div className='App'>
             {/* Imagen de fondo */}
-            <img src="Recursos/background.png" alt="background color image" id='bckimg'/>
+            <img src="Recursos/background.png" alt="background color image" className="ancho" id='bckimg'/>
             {/* Header */}
             <header className='App-header'>
                 {/* Barra+logo */}
                 <div className="container-fluid" id='headerLogo'> 
                     <img src="Recursos/LOGO 1.png" alt="logo grow pro" id='logoImg'></img>
+                    <button id='btnHeaderMobile' className='btnHeaderStyle'><p className='textMedio'>QUIERO MÁS INFO</p></button>
                 </div>
                 {/* Header+CTA */}
                 <div className="container-fluid" id='headerText'>
                     <h1 id='headerTitle'>Las mejores experiencias para estudiar y trabajar <span id='titleSpecial'>en Australia</span></h1>
-                    <button id='btnHeader'><p>QUIERO MÁS INFO</p></button>
-                    {}
+                    <button id='btnHeader' className='btnHeaderStyle'><p className='textMedio'>QUIERO MÁS INFO</p></button>
                 </div>
             </header>
             {/* Formulario + checks */}
             <div className='container-fluid section'>
               <div className='row container-fluid' id='firstSectionRow'>
                 {/* Columna formulario */}
-                <div className='col-md-6' id='form'>
+                <div className='col-md-6 order-md-1 order-2' id='form'>
                   <form action="" className='container-fluid'>
                     <div className='row'>
                       <div className='col'>
@@ -56,7 +38,7 @@ function App () {
                     <div className='row'>
                       <div className='col'>
                         <label htmlFor="">Correo</label>
-                        <input type="text" id='inputCorreo' required/>
+                        <input type="email" className='ancho' required/>
                       </div>
                     </div>
                     <div className='row'>
@@ -64,9 +46,8 @@ function App () {
                         <label htmlFor="">Número de teléfono</label>
                         <input type="text" value="Spain (España)" disabled required/>
                       </div>
-                      <div className='col'>
-                        <label htmlFor="">‎</label>
-                        <input type="text" value="+34" required/>
+                      <div className='col align-self-end'>
+                        <input type="tel" id="telefono" name="telefono" pattern="^\+34\d{9}$" required/>
                       </div>
                     </div>
                     <div className='row'>
@@ -94,36 +75,36 @@ function App () {
                     
                       </div>
                     </div>
-                    <div className='row' id='rowSend'>
+                    <div className='row ancho' id='rowSend'>
                       <button id='btnForm' className='btnPrincipal'><p>ENVIAR</p></button>
                     </div>
                   </form>
                 </div>
                 {/* Columna textos */}
-                <div className='col-md-5' >
+                <div className='col-md-5 order-md-2 order-1' >
                   <h1 className='textGrande textFino'>Lorem Ipsum es simplemente el texto de relleno de <strong>las imprentas</strong></h1>
                   <div className='checksForm'>
-                    <p className='textPequeño'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-                    <p className='textPequeño'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-                    <p className='textPequeño'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-                    <p className='textPequeño'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
+                    <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
+                    <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
+                    <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
+                    <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* Sección experiencias */}
-            <div className='container-fluid section' id='sectionExp'>
-            <p className='textGrande textFino'>¿Qué tipo de <strong>experiencia quieres vivir?</strong></p>
+            <div className='container-fluid section'>
+            <p className='textGrande textFino ancho' id='sectionExp'>¿Qué tipo de <strong>experiencia quieres vivir?</strong></p>
             <p className='textFino textPequeño'>Selecciona el tipo de curso que te gustaría hacer, rellena el formulario y nuestro equipo especialista se pondrá en contacto contigo tan pronto como sea posible.</p>
             {/* Primera fila de tarjetas */}
-            <div className='row container-fluid te'>
+            <div className='row mt-5 g-5 ancho'>
               {/* Primera tarjeta */}
-              <div className='col-md-4'>
+              <div className='col-md-4 p-0 p-md-4'>
                 <div className='card'>
-                  <div className='topVentas'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
+                  <div className='topVentas ancho'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
                   <img src="Recursos\card1.png" alt="" className='card-img-top'/>
                   <p className='cardOff textTiny'>🔥70% off</p>
-                  <div className='cardFondo'>
+                  <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard textMedio'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
@@ -142,10 +123,11 @@ function App () {
                 </div>
               </div>
               {/* Segunda tarjeta */}
-              <div className='col-md-4'>
+              <div className='col-md-4 p-0 p-md-4'>
                 <div className='card'>
                   <img src="Recursos\card2.png" alt="" className='card-img-top'/>
-                  <div className='cardFondo'>
+                  <p className='cardOff textTiny'>🔥70% off</p>
+                  <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
@@ -164,10 +146,10 @@ function App () {
                 </div>
               </div>
               {/* Tercera tarjeta */}
-              <div className='col-md-4'>
+              <div className='col-md-4 p-0 p-md-4'>
                 <div className='card'>
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
-                  <div className='cardFondo'>
+                  <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
@@ -188,14 +170,14 @@ function App () {
             </div>
             
             {/* Segunda fila de tarjetas */}
-            <div className='row mt-5 container-fluid' >
+            <div className='row mt-0 g-5 ancho' >
               {/* Cuarta tarjeta */}
-              <div className='col-md-4 offset-md-2'>
+              <div className='col-md-4 offset-md-2 p-0 p-md-4'>
                 <div className='card'>
-                  <div className='topVentas'><p>Top ventas de GrowPro Experience</p></div>
+                  <div className='topVentas ancho'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
                   <img src="Recursos\card1.png" alt="" className='card-img-top'/>
                   <p className='cardOff'>🔥70% off</p>
-                  <div className='cardFondo'>
+                  <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
@@ -214,10 +196,10 @@ function App () {
                 </div>
               </div>
               {/* Quinta tarjeta */}
-              <div className='col-md-4'>
+              <div className='col-md-4 p-0 p-md-4'>
                 <div className='card'>
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
-                  <div className='cardFondo'>
+                  <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
@@ -240,31 +222,31 @@ function App () {
             </div>
             {/* Sección que hace diferente */}
             <div className='section'>
-              <p className='textGrande textFino'>¿Qué hace diferente GrowPro?</p>
-              <strong className='textGrande'>Te acompaña en destino, pero de verdad</strong> 
+              <p className='textGrande textFino text-center'>¿Qué hace diferente GrowPro?</p>
+              <strong className='textGrande text-center'>Te acompaña en destino, pero de verdad</strong> 
               {/* Tarjetas */}
-              <div className='row mt-5 cardRow'>
+              <div className='row mt-5 g-5 cardRow ancho'>
                 {/* Primera */}
-                <div className='col-5 infoCard offset-md-1'>
+                <div className='col-md-5 infoCard offset-md-1'>
                   <img src="Recursos/iconInfo1.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>Kick-off Meeting</p>
                   <p className='textInfo'>Es una sesión online que se realiza antes de tu viaje, en la que conocerás a tu equipo en destino y a otros estudiantes. ¡Aterrizarás con la seguridad de conocer a quién te espera en destino.</p>
                 </div>
-                <div className='col-5 infoCard offset-md-1'>
+                <div className='col-md-5 infoCard offset-md-1'>
                 <img src="Recursos/iconInfo2.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>Welcome Session y Welcome Night</p>
                   <p className='textInfo'>Nada más llegar, te recibimos en nuestras oficinas, junto a otros estudiantes, para contarte todo sobre tu nueva ciudad. Después, te invitaremos a un ¡buen evento!</p>
                 {/* Segunda */}
                 </div>
               </div>
-              <div className='row mt-5 cardRow'>
-                <div className='col-5 infoCard offset-md-1'>
+              <div className='row mt-0 g-5 cardRow ancho'>
+                <div className='col-md-5 infoCard offset-md-1'>
                   <img src="Recursos/iconInfo3.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>Workshops</p>
                   <p className='textInfo'>Tenemos las claves para que encuentres trabajo y las compartimos en diferentes workshops. ¡Te lo ponemos más fácil!</p>
                 {/* Tercera */}
                 </div>
-                <div className='col-5 infoCard offset-md-1'>
+                <div className='col-md-5 infoCard offset-md-1'>
                   <img src="Recursos/iconInfo4.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>Eventazos</p>
                   <p className='textInfo'>Eventos todas las semanas. Cada uno es una excusa para juntar a la comunidad grower y pasar un buen rato juntos. ¡Las buenas vibes que no falten!</p>
@@ -287,13 +269,21 @@ function App () {
             </div> 
              {/*Video  */}
             <div id='videoDiv'>
-              <iframe width="1518" height="864" src="https://www.youtube.com/embed/kF0OtEH8Lo0" title="Sidney Australia - Maria Jose - Testimonio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id='video'></iframe>
+              <img src="Recursos/VideoPreview.png" onClick={() => MostrarVideo()} alt="" className='ancho' />
               {/* Siguiente / Anterior */}
               <div>
                 <img src="Recursos/prevVideo.png" alt="" />
                 <img src="Recursos/nextVideo.png" alt="" />
               </div>
             </div>
+            <div id='videoFullScreen' className='ancho'>
+              <div id='videoContainer' className='ancho'>
+                <div id="videoClose"  onClick={() => OcultarVideo()}>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+                </div>
+                  <iframe width="1518" height="864" src="https://www.youtube.com/embed/kF0OtEH8Lo0" title="Sidney Australia - Maria Jose - Testimonio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id='video' className='ancho'></iframe>
+                </div>
+              </div>
             </div>
             {/* Sección CTA */}
             <div className='dividerText'>
@@ -309,5 +299,33 @@ function App () {
         </div>
     )
 }
+
+addEventListener('load', () => {  
+  var boton = document.getElementById('btnHeader');
+  var posicionDesplazar = 20;
+
+  window.addEventListener('scroll', function() {
+    var posicionActual = window.pageYOffset;
+
+    if (posicionActual > posicionDesplazar) {
+      boton.style.display = 'flex';
+      boton.classList.add('mostrar');
+    } else {
+      boton.style.display = 'none';
+      boton.classList.remove('mostrar');
+    }
+})
+}, false)
+
+
+function MostrarVideo(){
+  var video = document.getElementById('videoFullScreen');
+  video.style.display = 'flex';
+} 
+function OcultarVideo(){
+  var video = document.getElementById('videoFullScreen');
+  video.style.display = 'none';
+}
+
 
 export default App
