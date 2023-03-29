@@ -1,6 +1,8 @@
 /* -------------------Global------------------- */
 *{
     font-family: 'Poppins';
+    font-style: normal;
+
 }
 
 body{
@@ -113,10 +115,10 @@ a{
 }
 
 #headerText{
-    background-image: url("../Recursos/HeaderImg.png");
+    background-image:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url("../Recursos/HeaderImg.png");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateY(-63px);
     height: 40vh;
     display: flex;
     align-items: center;
@@ -129,10 +131,7 @@ a{
 #headerTitle{
     line-height: 70px;
     font-size: 50px;
-}
-
-.App-header{
-    height: 530px;
+    isolation: isolate;
 }
 
 #titleSpecial{
@@ -160,9 +159,10 @@ a{
     display: none;
     transition: opacity 0.3s ease-in-out;
 }
+
 .btnHeader.mostrar {
     opacity: 1;
-  }
+}
 
 .btnHeaderStyle p {
     margin-bottom: 0;
@@ -203,7 +203,6 @@ a{
 }
 
 form label{
-    margin-top: 2vh;
     letter-spacing: 0.4px;
     color: #2F343D;     
 }
@@ -291,7 +290,6 @@ form select{
 }
 
 .cardOff{
-    font-style: normal;
     font-weight: 800;
     line-height: 30px;
     text-align: center;
@@ -316,7 +314,6 @@ form select{
 }
 
 .topVentas p{
-    font-style: normal;
     line-height: 30px;
     color: #FFFFFF;
     margin: 0;
@@ -329,18 +326,20 @@ form select{
 }
 
 .cardTitle{
-    font-style: normal;
     font-size: 22px;
     line-height: 30px;
     color: #2F343D;
 }
 
 .precioCard{
-    font-style: normal;
-    
     font-size: 16px;
     line-height: 22px;
     color: #878787;
+}
+.precioCard strong{
+    color: #5D338D;
+    font-size: 20px;
+    line-height: 22px;
 }
 
 .btnCard{
@@ -351,7 +350,6 @@ form select{
 }
 
 .btnCard p {
-    font-style: normal;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.05em;
@@ -361,7 +359,6 @@ form select{
 }
 
 .verMasCard{
-    font-style: normal;
     line-height: 30px;
     display: flex;
     align-items: center;
@@ -381,7 +378,6 @@ form select{
 }
 
 .validezText{
-    font-style: normal;
     font-weight: 600;
     font-size: 13px;
     line-height: 30px;

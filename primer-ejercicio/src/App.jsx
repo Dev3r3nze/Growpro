@@ -23,35 +23,42 @@ function App () {
             <div className='container-fluid section'>
               <div className='row container-fluid' id='firstSectionRow'>
                 {/* Columna formulario */}
-                <div className='col-md-6 order-md-1 order-2' id='form'>
+                <div className='col-lg-6 order-lg-1 order-2' id='form'>
                   <form action="" className='container-fluid'>
                     <div className='row'>
-                      <div className='col'>
+                      <div className='col-sm-12 col-lg-6'>
                         <label htmlFor="">Nombre</label>
                         <input type="text" required/>
                       </div>
-                      <div className='col'>
+                      <div className='col-sm-12 col-lg-6 mt-4 mt-lg-0 '>
                         <label htmlFor="">Apellidos</label>
                         <input type="text" required/>
                       </div>
                     </div>
-                    <div className='row'>
+                    <div className='row  mt-4'>
                       <div className='col'>
                         <label htmlFor="">Correo</label>
                         <input type="email" className='ancho' required/>
                       </div>
                     </div>
-                    <div className='row'>
-                      <div className='col'>
+                      <div className='row mt-4'>
                         <label htmlFor="">Número de teléfono</label>
-                        <input type="text" value="Spain (España)" disabled required/>
                       </div>
-                      <div className='col align-self-end'>
-                        <input type="tel" id="telefono" name="telefono" pattern="^\+34\d{9}$" required/>
+                      <div className='row '>
+                        <div className='col-sm-4 col-xs-4 col-lg-6'>
+                          <select>
+                            <option value="Spn">Spain</option>
+                            <option value="Mex">México</option>
+                            <option value="Arg">Argentina</option>
+                          </select>
+                        </div>
+                        <div className='col-sm-8 col-xs-7 col-lg-6'>
+                          <input type="tel" id="telefono" name="telefono" pattern="^\+34\d{9}$" required/>
+                        </div>
                       </div>
-                    </div>
-                    <div className='row'>
-                      <div className='col'>
+                      
+                    <div className='row  mt-4'>
+                      <div className='col-sm-12 col-lg-6'>
                         <label htmlFor="">Nacionalidad</label>
                         <select>
                           <option value="Spn">España</option>
@@ -59,7 +66,7 @@ function App () {
                           <option value="Arg">Argentina</option>
                         </select>
                       </div>
-                      <div className='col'>
+                      <div className='col-sm-12 col-lg-6 mt-4 mt-lg-0 '>
                         <label htmlFor="">¿Qué quieres estudiar?</label>
                         <select>
                           <option value="S">Seleccione</option>
@@ -68,7 +75,7 @@ function App () {
                         </select>
                       </div>
                     </div>
-                    <div className='row'>
+                    <div className='row  mt-4'>
                       <div className='col' id='colTerms'>
                       <input type="checkbox" id='checkTerms' required/>
                       <p id='termsText'>He leído y acepto el <a href="">aviso legal</a> y la <a href="">política de privacidad.</a></p>
@@ -81,7 +88,7 @@ function App () {
                   </form>
                 </div>
                 {/* Columna textos */}
-                <div className='col-md-5 order-md-2 order-1' >
+                <div className='col-lg-5 order-lg-2 order-1' >
                   <h1 className='textGrande textFino'>Lorem Ipsum es simplemente el texto de relleno de <strong>las imprentas</strong></h1>
                   <div className='checksForm'>
                     <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
@@ -95,11 +102,11 @@ function App () {
             {/* Sección experiencias */}
             <div className='container-fluid section'>
             <p className='textGrande textFino ancho' id='sectionExp'>¿Qué tipo de <strong>experiencia quieres vivir?</strong></p>
-            <p className='textFino textPequeño'>Selecciona el tipo de curso que te gustaría hacer, rellena el formulario y nuestro equipo especialista se pondrá en contacto contigo tan pronto como sea posible.</p>
+            <p className='textFino textPequeño text-start container-fluid'>Selecciona el tipo de curso que te gustaría hacer, rellena el formulario y nuestro equipo especialista se pondrá en contacto contigo tan pronto como sea posible.</p>
             {/* Primera fila de tarjetas */}
-            <div className='row mt-5 g-5 ancho'>
+            <div className='row g-5 ancho'>
               {/* Primera tarjeta */}
-              <div className='col-md-4 p-0 p-md-4'>
+              <div className='col-lg-4 p-0 p-lg-4'>
                 <div className='card'>
                   <div className='topVentas ancho'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
                   <img src="Recursos\card1.png" alt="" className='card-img-top'/>
@@ -123,7 +130,7 @@ function App () {
                 </div>
               </div>
               {/* Segunda tarjeta */}
-              <div className='col-md-4 p-0 p-md-4'>
+              <div className='col-lg-4 p-0 p-lg-4'>
                 <div className='card'>
                   <img src="Recursos\card2.png" alt="" className='card-img-top'/>
                   <p className='cardOff textTiny'>🔥70% off</p>
@@ -146,7 +153,7 @@ function App () {
                 </div>
               </div>
               {/* Tercera tarjeta */}
-              <div className='col-md-4 p-0 p-md-4'>
+              <div className='col-lg-4 p-0 p-lg-4'>
                 <div className='card'>
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
                   <div className='cardFondo ancho'>
@@ -172,7 +179,7 @@ function App () {
             {/* Segunda fila de tarjetas */}
             <div className='row mt-0 g-5 ancho' >
               {/* Cuarta tarjeta */}
-              <div className='col-md-4 offset-md-2 p-0 p-md-4'>
+              <div className='col-lg-4 offset-lg-2 p-0 p-lg-4'>
                 <div className='card'>
                   <div className='topVentas ancho'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
                   <img src="Recursos\card1.png" alt="" className='card-img-top'/>
@@ -196,7 +203,7 @@ function App () {
                 </div>
               </div>
               {/* Quinta tarjeta */}
-              <div className='col-md-4 p-0 p-md-4'>
+              <div className='col-lg-4 p-0 p-lg-4'>
                 <div className='card'>
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
                   <div className='cardFondo ancho'>
@@ -227,28 +234,28 @@ function App () {
               {/* Tarjetas */}
               <div className='row mt-5 g-5 cardRow ancho'>
                 {/* Primera */}
-                <div className='col-md-5 infoCard offset-md-1'>
+                <div className='col-lg-5 infoCard offset-lg-1'>
                   <img src="Recursos/iconInfo1.png" alt="" className='iconInfo'/>
-                  <p className='titleInfo'>Kick-off Meeting</p>
+                  <p className='titleInfo'>KICK-OFF MEETING</p>
                   <p className='textInfo'>Es una sesión online que se realiza antes de tu viaje, en la que conocerás a tu equipo en destino y a otros estudiantes. ¡Aterrizarás con la seguridad de conocer a quién te espera en destino.</p>
                 </div>
-                <div className='col-md-5 infoCard offset-md-1'>
+                <div className='col-lg-5 infoCard offset-lg-1'>
                 <img src="Recursos/iconInfo2.png" alt="" className='iconInfo'/>
-                  <p className='titleInfo'>Welcome Session y Welcome Night</p>
+                  <p className='titleInfo'>WELCOME SESSION Y WELCOME NIGHT</p>
                   <p className='textInfo'>Nada más llegar, te recibimos en nuestras oficinas, junto a otros estudiantes, para contarte todo sobre tu nueva ciudad. Después, te invitaremos a un ¡buen evento!</p>
                 {/* Segunda */}
                 </div>
               </div>
               <div className='row mt-0 g-5 cardRow ancho'>
-                <div className='col-md-5 infoCard offset-md-1'>
+                <div className='col-lg-5 infoCard offset-lg-1'>
                   <img src="Recursos/iconInfo3.png" alt="" className='iconInfo'/>
-                  <p className='titleInfo'>Workshops</p>
+                  <p className='titleInfo'>WORKSHOPS</p>
                   <p className='textInfo'>Tenemos las claves para que encuentres trabajo y las compartimos en diferentes workshops. ¡Te lo ponemos más fácil!</p>
                 {/* Tercera */}
                 </div>
-                <div className='col-md-5 infoCard offset-md-1'>
+                <div className='col-lg-5 infoCard offset-lg-1'>
                   <img src="Recursos/iconInfo4.png" alt="" className='iconInfo'/>
-                  <p className='titleInfo'>Eventazos</p>
+                  <p className='titleInfo'>EVENTAZOS</p>
                   <p className='textInfo'>Eventos todas las semanas. Cada uno es una excusa para juntar a la comunidad grower y pasar un buen rato juntos. ¡Las buenas vibes que no falten!</p>
                 {/* Cuarta */}
                 </div>
