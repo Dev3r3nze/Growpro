@@ -15,13 +15,22 @@ function App () {
                 </div>
                 {/* Header+CTA */}
                 <div className="container-fluid" id='headerText'>
-                    <h1 id='headerTitle'>Las mejores experiencias para estudiar y trabajar <span id='titleSpecial'>en Australia</span></h1>
+                    <h1 id='headerTitle'>Las mejores experiencias para estudiar <br /> y trabajar <span id='titleSpecial'>en Australia</span></h1>
                     <button id='btnHeader' className='btnHeaderStyle'><p className='textMedio'>QUIERO MÁS INFO</p></button>
+                    
                 </div>
+                <svg width="0" height="0">
+                  <defs>
+                    <clipPath id="gp-header-default-mask" clipPathUnits="objectBoundingBox">
+                      <path d="M0,0 V0.82 S0.214,0.999,0.391,1 C0.516,1,0.582,0.935,0.656,0.904 C0.746,0.867,0.767,0.867,0.809,0.862 C0.905,0.852,1,0.915,1,0.915 V0" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              <div id='line'/>
             </header>
             {/* Formulario + checks */}
             <div className='container-fluid section'>
-              <div className='row container-fluid' id='firstSectionRow'>
+              <div className='row container-fluid g-5' id='firstSectionRow'>
                 {/* Columna formulario */}
                 <div className='col-lg-6 order-lg-1 order-2' id='form'>
                   <form action="" className='container-fluid'>
@@ -88,7 +97,7 @@ function App () {
                   </form>
                 </div>
                 {/* Columna textos */}
-                <div className='col-lg-5 order-lg-2 order-1' >
+                <div className='col-lg-6 order-lg-2 order-1' >
                   <h1 className='textGrande textFino'>Lorem Ipsum es simplemente el texto de relleno de <strong>las imprentas</strong></h1>
                   <div className='checksForm'>
                     <p className='textPequeño textFino'><img src="Recursos\icons-check.png" alt="" />Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
@@ -117,8 +126,15 @@ function App () {
                       <p className='precioCard textMedio'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
                       <button className='btnCard textMedio'><p className='textTiny'>SELECCIONAR</p></button>
                       <div className='verMasDiv'>
-                        <p className='verMasCard textTiny'>VER MÁS</p>
-                        <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        <div className='verMasController' onClick={() => MostrarMas(0)}>
+                          <p className='verMasCard textTiny'>VER MÁS</p>
+                          <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        </div>
+                        <div className='textVer'>
+                          <p className='text-start textPequeño'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa 
+                          </p>
+                        </div>
                       </div>
                       <div className='divider'></div>
                       <div className='validezDiv'>
@@ -140,8 +156,15 @@ function App () {
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
                       <button className='btnCard'><p className='textTiny'>SELECCIONAR</p></button>
                       <div className='verMasDiv'>
-                        <p className='verMasCard textTiny'>VER MÁS</p>
-                        <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        <div className='verMasController' onClick={() => MostrarMas(1)}>
+                          <p className='verMasCard textTiny'>VER MÁS</p>
+                          <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        </div>
+                        <div className='textVer'>
+                          <p className='text-start  textPequeño'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa 
+                          </p>
+                        </div>
                       </div>
                       <div className='divider'></div>
                       <div className='validezDiv'>
@@ -158,12 +181,19 @@ function App () {
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
                   <div className='cardFondo ancho'>
                     <div className='cardBody'>
-                      <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
+                      <h5 className='cardTitle'>Estudia Inglés general mientras disfrutas de las playas de Australia</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
                       <button className='btnCard'><p className='textTiny'>SELECCIONAR</p></button>
                       <div className='verMasDiv'>
-                        <p className='verMasCard textTiny'>VER MÁS</p>
-                        <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        <div className='verMasController' onClick={() => MostrarMas(2)}>
+                          <p className='verMasCard textTiny'>VER MÁS</p>
+                          <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        </div>
+                        <div className='textVer'>
+                          <p className='text-start  textPequeño'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa 
+                          </p>
+                        </div>
                       </div>
                       <div className='divider'></div>
                       <div className='validezDiv'>
@@ -177,21 +207,28 @@ function App () {
             </div>
             
             {/* Segunda fila de tarjetas */}
-            <div className='row mt-0 g-5 ancho' >
+            <div className='row mt-0 ancho' >
               {/* Cuarta tarjeta */}
               <div className='col-lg-4 offset-lg-2 p-0 p-lg-4'>
                 <div className='card'>
                   <div className='topVentas ancho'><p className='textTiny'>Top ventas de GrowPro Experience</p></div>
                   <img src="Recursos\card1.png" alt="" className='card-img-top'/>
-                  <p className='cardOff'>🔥70% off</p>
+                  <p className='cardOff textTiny'>🔥70% off</p>
                   <div className='cardFondo ancho'>
                     <div className='cardBody'>
                       <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
                       <button className='btnCard'><p className='textTiny'>SELECCIONAR</p></button>
                       <div className='verMasDiv'>
-                        <p className='verMasCard textTiny'>VER MÁS</p>
-                        <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        <div className='verMasController' onClick={() => MostrarMas(3)}>
+                          <p className='verMasCard textTiny'>VER MÁS</p>
+                          <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        </div>
+                        <div className='textVer'>
+                          <p className='text-start  textPequeño'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa 
+                          </p>
+                        </div>
                       </div>
                       <div className='divider'></div>
                       <div className='validezDiv'>
@@ -208,12 +245,19 @@ function App () {
                   <img src="Recursos\card3.png" alt="" className='card-img-top'/>
                   <div className='cardFondo ancho'>
                     <div className='cardBody'>
-                      <h5 className='cardTitle'>Estudia Medio Ambiente en Sidney</h5>
+                      <h5 className='cardTitle'>Estudia Inglés general mientras disfrutas de las playas de Australia</h5>
                       <p className='precioCard'><del>8800 AUD</del> | <strong>2640 AUD</strong></p>
                       <button className='btnCard'><p className='textTiny'>SELECCIONAR</p></button>
                       <div className='verMasDiv'>
-                        <p className='verMasCard textTiny'>VER MÁS</p>
-                        <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        <div className='verMasController' onClick={() => MostrarMas(4)}>
+                          <p className='verMasCard textTiny'>VER MÁS</p>
+                          <img src="Recursos/verMásIcon.png" alt="" className='verMasIcon'/>
+                        </div>
+                        <div className='textVer'>
+                          <p className='text-start  textPequeño'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa 
+                          </p>
+                        </div>
                       </div>
                       <div className='divider'></div>
                       <div className='validezDiv'>
@@ -228,32 +272,32 @@ function App () {
             
             </div>
             {/* Sección que hace diferente */}
-            <div className='section'>
+            <div className='section' id='sectionDiff'>
               <p className='textGrande textFino text-center'>¿Qué hace diferente GrowPro?</p>
               <strong className='textGrande text-center'>Te acompaña en destino, pero de verdad</strong> 
               {/* Tarjetas */}
-              <div className='row mt-5 g-5 cardRow ancho'>
+              <div className='row mt-5 g-5 cardRow ancho justify-content-evenly'>
                 {/* Primera */}
-                <div className='col-lg-5 infoCard offset-lg-1'>
+                <div className='col-lg-5 infoCard'>
                   <img src="Recursos/iconInfo1.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>KICK-OFF MEETING</p>
                   <p className='textInfo'>Es una sesión online que se realiza antes de tu viaje, en la que conocerás a tu equipo en destino y a otros estudiantes. ¡Aterrizarás con la seguridad de conocer a quién te espera en destino.</p>
                 </div>
-                <div className='col-lg-5 infoCard offset-lg-1'>
+                <div className='col-lg-5 infoCard'>
                 <img src="Recursos/iconInfo2.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>WELCOME SESSION Y WELCOME NIGHT</p>
                   <p className='textInfo'>Nada más llegar, te recibimos en nuestras oficinas, junto a otros estudiantes, para contarte todo sobre tu nueva ciudad. Después, te invitaremos a un ¡buen evento!</p>
                 {/* Segunda */}
                 </div>
               </div>
-              <div className='row mt-0 g-5 cardRow ancho'>
-                <div className='col-lg-5 infoCard offset-lg-1'>
+              <div className='row mt-0 g-5 cardRow ancho justify-content-evenly'>
+                <div className='col-lg-5 infoCard '>
                   <img src="Recursos/iconInfo3.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>WORKSHOPS</p>
                   <p className='textInfo'>Tenemos las claves para que encuentres trabajo y las compartimos en diferentes workshops. ¡Te lo ponemos más fácil!</p>
                 {/* Tercera */}
                 </div>
-                <div className='col-lg-5 infoCard offset-lg-1'>
+                <div className='col-lg-5 infoCard '>
                   <img src="Recursos/iconInfo4.png" alt="" className='iconInfo'/>
                   <p className='titleInfo'>EVENTAZOS</p>
                   <p className='textInfo'>Eventos todas las semanas. Cada uno es una excusa para juntar a la comunidad grower y pasar un buen rato juntos. ¡Las buenas vibes que no falten!</p>
@@ -299,27 +343,27 @@ function App () {
                 <button className='btnPrincipal'>QUIERO MÁS INFO</button>
             </div>
             {/* Footer */}
-            <footer>
-              <div className='footerText'><p>©2021 GrowPro • Todos los derechos reservados</p></div>
-              <div><p><a href="" className='textMuyPeque textFino'>Aviso legal</a>  |  <a href="" className='textMuyPeque textFino'>Política de cookies</a>  |  <a href="" className='textMuyPeque textFino'>Política de privacidad</a></p></div>
+            <footer className='row text-center container-fluid' id='footer'>
+              <div className='footerText col-md-6 col-12 order-2 order-md-1'><p>©2021 GrowPro • Todos los derechos reservados</p></div>
+              <div className='footerText col order-1 order-md-2'><p><a href="" className='textMuyPeque textFino'>Aviso legal</a>  |  <a href="" className='textMuyPeque textFino'>Política de cookies</a>  |  <a href="" className='textMuyPeque textFino'>Política de privacidad</a></p></div>
             </footer>
         </div>
     )
 }
 
 addEventListener('load', () => {  
-  var boton = document.getElementById('btnHeader');
-  var posicionDesplazar = 20;
+  var header = document.getElementById('headerLogo');
+  var posicionDesplazar = window.innerHeight;
 
   window.addEventListener('scroll', function() {
     var posicionActual = window.pageYOffset;
 
     if (posicionActual > posicionDesplazar) {
-      boton.style.display = 'flex';
-      boton.classList.add('mostrar');
+      header.style.display = 'flex';
+      header.style.position = 'fixed';
+      
     } else {
-      boton.style.display = 'none';
-      boton.classList.remove('mostrar');
+      header.style.position = 'initial';
     }
 })
 }, false)
@@ -332,6 +376,17 @@ function MostrarVideo(){
 function OcultarVideo(){
   var video = document.getElementById('videoFullScreen');
   video.style.display = 'none';
+}
+
+function MostrarMas(num){
+  console.log(num);
+  var text = document.getElementsByClassName('textVer')[num];
+  if(text.style.display == 'flex'){
+    text.style.display = 'none';
+  }else{
+    text.style.display = 'flex';
+  }
+
 }
 
 
