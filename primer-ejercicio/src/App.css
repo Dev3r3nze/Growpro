@@ -1,3 +1,19 @@
+/* -------------------Variables------------------- */
+:root{
+    --purple: #7A33CC;
+    --purple-light-dark: #6229a3;
+    --purple-dark: #7733CE;
+    --purple-darker: #5D338D;
+    --white: #FFFFFF;
+    --gray: #E5E5E5;
+    --grey-bk:#F9F9F9;
+    --gray-mid: #D9D9D9;
+    --gray-dark: #878787;
+    --black-light: #2F343D;
+    --red: #FF4351;
+}
+
+
 /* -------------------Global------------------- */
 *{
     font-family: 'Poppins';
@@ -6,12 +22,12 @@
 }
 
 body{
-    background-color: #E5E5E5;
+    background-color: var(--grey-bk);
     
 }
 
 a{
-    color: #7A33CC;
+    color: var(--purple);
 }
 
 
@@ -23,7 +39,7 @@ a{
 .textGrande{
     font-size: 42px;
     line-height: 56px;
-    color: #2F343D;
+    color: var(--black-light);
 }
 
 .textTiny{
@@ -41,14 +57,14 @@ a{
 .textPequeño{
     font-size: 18px;
     line-height: 30px;
-    color: #2F343D;
+    color: var(--black-light);
 }
 
 .textMuyPeque{
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.05em;
-    color: #2F343D;
+    color: var(--black-light);
 }
 
 .textMediano{
@@ -64,10 +80,13 @@ a{
 .btnPrincipal{
     padding: 20px 30px;
     width: auto;
-    color:#FFFFFF;
-    background: #7A33CC;
+    color:var(--white);
+    background: var(--purple);
     border-radius: 50px;
     border: 0;
+}
+.btnPrincipal:hover,.btnCard:hover{
+    background: var(--purple-light-dark);
 }
 
 .dividerText{
@@ -87,7 +106,7 @@ a{
     margin: auto;
     margin-top: 10vh;
     align-items: center;
-    width: 90%;
+    width: 80%;
     flex-direction: column;
 }
 
@@ -104,14 +123,20 @@ a{
     z-index: -1;
 }
 
-#headerLogo{
-    background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
+.headerLogo{
+    background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
     height: 70px;
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     justify-content: space-between;
+    top: 0;
+    transition: all 0.25s ease; 
+}
+
+.headerLogoHidden{
+    top:-100px;
 }
 
 #logoImg{
@@ -142,7 +167,7 @@ a{
 }
 
 #titleSpecial{
-    background: #FF5766;
+    background: var(--red);
     border-radius: 50px;
     padding: 0 13px;
 }
@@ -161,10 +186,13 @@ a{
     justify-content: center;
     align-items: center;
     padding: 20px 30px;
-    background: #FFFFFF;
+    background: var(--white);
     border-radius: 50px;
     border: 0;
     transition: opacity 0.3s ease-in-out;
+}
+.btnHeaderStyle:hover{
+    background: #f9f9f9;
 }
 
 .btnHeader.mostrar {
@@ -182,6 +210,7 @@ a{
     #headerLogo {
       position: fixed;
       z-index: 2;
+      top: 0;
     }
     #btnHeaderMobile{
         display: flex;
@@ -221,7 +250,7 @@ a{
     flex-direction: column;
     align-items: flex-start;
     padding: 40px 30px;
-    background: #FFFFFF;
+    background: var(--white);
     border-radius: 20px;
     filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.15));
     font-weight: 500;
@@ -240,8 +269,8 @@ form input, form select{
     flex-direction: row;
     align-items: flex-start;
     padding: 15px;
-    background: #FFFFFF;
-    border: 1px solid #878787;
+    background: var(--white);
+    border: 1px solid var(--gray-dark);
     border-radius: 10px;
     width: 100%;
 }
@@ -251,10 +280,14 @@ form select{
     appearance: none;
     background-image: url("../Recursos/Vector.png");
     background-repeat: no-repeat;
-    background-position: right 35px bottom 28px;
+    background-position: right 35px center;
     padding-right: 25px;
 }
-
+@media (max-width: 576px) {
+    .mt-xs-4{
+        margin-top: 1.5rem!important;
+    }
+}
 
 #termsText{
     margin: 0;
@@ -293,7 +326,7 @@ form select{
 #btnForm p {
     margin-bottom: 0;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 
@@ -311,9 +344,16 @@ form select{
     border-radius: 50px 50px 20px 20px;
     filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.1));
     background: #ffffff00;
+    transition: all .2s ease;
 }
+.card:hover,.infoCard:hover{
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 20px 0 rgba(0,0,0,.1);
+}
+
+
 .cardFondo{
-    background-color: #FFFFFF;
+    background-color: var(--white);
     border-radius: 0 0 20px 20px;
 }
 
@@ -321,10 +361,10 @@ form select{
     font-weight: 800;
     line-height: 30px;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--white);
     align-self: flex-end;
     transform: translateY(4vh);
-    background: #2F343D;
+    background: var(--black-light);
     border: 1px solid #FFFFFF;
     border-radius: 20px 0 0 20px;
     padding: 0.1vh 1vh;
@@ -333,7 +373,7 @@ form select{
 }
 
 .topVentas{
-    background: linear-gradient(83.33deg, #7733CE 0%, #FF4351 100%);
+    background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
     border-radius: 20px 20px 0 0;
     text-align: center;
     padding: 2px 35px;
@@ -344,7 +384,7 @@ form select{
 
 .topVentas p{
     line-height: 30px;
-    color: #FFFFFF;
+    color: var(--white);
     margin: 0;
 }
 
@@ -357,33 +397,34 @@ form select{
 .cardTitle{
     font-size: 22px;
     line-height: 30px;
-    color: #2F343D;
+    color: var(--black-light);
 }
 
 .precioCard{
     font-size: 16px;
     line-height: 22px;
-    color: #878787;
+    color: var(--gray-dark);
 }
 .precioCard strong{
-    color: #5D338D;
+    color: var(--purple-darker);
     font-size: 20px;
     line-height: 22px;
 }
 
 .btnCard{
-    background: #7A33CC;
+    background: var(--purple);
     border-radius: 500px;
     border: 0;
     padding: 1vh;
 }
+
 
 .btnCard p {
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--white);
     margin: 0;
 }
 
@@ -392,7 +433,7 @@ form select{
     display: flex;
     align-items: center;
     letter-spacing: 0.05em;
-    color: #7A33CC;
+    color: var(--purple);
     margin: 0;
 }
 
@@ -407,7 +448,7 @@ form select{
 }
 
 .divider{
-    border: 1px solid #878787;
+    border: 1px solid var(--gray-dark);
     margin: 2vh 0;
 }
 
@@ -418,7 +459,7 @@ form select{
     display: flex;
     align-items: center;
     margin: 0;
-    color: #5D338D;
+    color: var(--purple-darker);
 }
 
 .textVer{
@@ -462,9 +503,11 @@ form select{
     justify-content: center;
     align-items: flex-start;
     padding: 45px 45px;
-    background: #FFFFFF;
+    background: var(--white);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    transition: all .2s ease;
+
 }
 .infoCard *{
     margin: 1vh 0;
@@ -572,4 +615,7 @@ form select{
 footer p,footer a{
     margin: 0;
     text-decoration: none;
+}
+footer a:hover{
+    color: #878787;
 }

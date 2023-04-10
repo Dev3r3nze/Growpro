@@ -9,7 +9,7 @@ function App () {
             {/* Header */}
             <header className='App-header'>
                 {/* Barra+logo */}
-                <div className="container-fluid" id='headerLogo'> 
+                <div className="container-fluid headerLogo" id='headerLogo'> 
                     <img src="Recursos/LOGO 1.png" alt="logo grow pro" id='logoImg'></img>
                     <button id='btnHeaderMobile' className='btnHeaderStyle'><p className='textMedio'>QUIERO MÁS INFO</p></button>
                 </div>
@@ -54,14 +54,14 @@ function App () {
                         <label htmlFor="">Número de teléfono</label>
                       </div>
                       <div className='row '>
-                        <div className='col-sm-4 col-xs-4 col-lg-6'>
+                        <div className='col-sm-4  col-lg-6'>
                           <select>
                             <option value="Spn">Spain</option>
                             <option value="Mex">México</option>
                             <option value="Arg">Argentina</option>
                           </select>
                         </div>
-                        <div className='col-sm-8 col-xs-7 col-lg-6'>
+                        <div className='col-sm-8 mt-xs-4 col-lg-6'>
                           <input type="tel" id="telefono" name="telefono" pattern="^\+34\d{9}$" required/>
                         </div>
                       </div>
@@ -207,7 +207,7 @@ function App () {
             </div>
             
             {/* Segunda fila de tarjetas */}
-            <div className='row mt-0 ancho' >
+            <div className='row g-5 mt-0 ancho' >
               {/* Cuarta tarjeta */}
               <div className='col-lg-4 offset-lg-2 p-0 p-lg-4'>
                 <div className='card'>
@@ -351,6 +351,8 @@ function App () {
     )
 }
 
+// Aparece a partir de cierto punto y se queda fijo
+{/*
 addEventListener('load', () => {  
   var header = document.getElementById('headerLogo');
   var posicionDesplazar = window.innerHeight;
@@ -359,14 +361,39 @@ addEventListener('load', () => {
     var posicionActual = window.pageYOffset;
 
     if (posicionActual > posicionDesplazar) {
-      header.style.display = 'flex';
+      header.style.transition = 'all 0.3s ease'; // agregamos una transición suave de 0.5 segundos
+      header.style.top = '0px';
       header.style.position = 'fixed';
-      
+
     } else {
+      header.style.top = '-100px';
       header.style.position = 'initial';
     }
-})
-}, false)
+  })
+}, false); */}
+
+// Aparece a y desaparece al hacer scroll hacia arriba o abajo
+{
+addEventListener('load', () => {  
+  var header = document.getElementById('headerLogo');
+  var lastScrollPosition = 0;
+
+  window.addEventListener('scroll', function() {
+    var currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > lastScrollPosition) {
+      // Scrolling hacia abajo
+      header.classList.add('headerLogoHidden');
+
+    } else {
+      // Scrolling hacia arriba
+      header.classList.remove('headerLogoHidden');
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  })
+}, false);
+}
 
 
 function MostrarVideo(){
@@ -379,7 +406,6 @@ function OcultarVideo(){
 }
 
 function MostrarMas(num){
-  console.log(num);
   var text = document.getElementsByClassName('textVer')[num];
   if(text.style.display == 'flex'){
     text.style.display = 'none';
