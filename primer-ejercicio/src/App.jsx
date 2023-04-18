@@ -133,7 +133,7 @@ function App() {
           header.classList.remove("headerLogoHidden");
           btnHeader.classList.remove("headerLogoHidden");
         }
-        if(currentScrollPosition < 100){
+        if(currentScrollPosition < 500){
           btnHeader.classList.add("headerLogoHidden");
         }
 

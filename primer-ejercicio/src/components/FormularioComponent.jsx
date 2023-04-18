@@ -61,7 +61,7 @@ class Formulario extends Component {
                 </div>
               </div>
               <div className="row  mt-4">
-                <div className="col-2 col-xxl-1" id="colTerms">
+                <div className="col-2" id="colTerms">
                   <input type="checkbox" id="checkTerms" required />
                 </div>
                 <div className="col">

@@ -176,7 +176,7 @@ a {
 #titleSpecial {
   background: var(--red);
   border-radius: 50px;
-  padding: 0 13px;
+  padding: 3px 13px;
 }
 
 #btnHeaderMobile {
@@ -289,11 +289,17 @@ form select {
     margin-top: 1.5rem !important;
   }
 }
+@media (min-width: 1800px) {
+  #colTerms {
+    width: 8.33%;
+  }
+}
 
 #termsText {
   margin: 0;
   transform: translateX(-30px);
 }
+
 
 #checkTerms {
   -webkit-appearance: none;
@@ -517,6 +523,15 @@ form select {
   margin: 1vh 0;
 }
 
+.iconInfo {
+  min-height: 80px;
+}
+
+.textInfo{
+  min-height: 8rem;
+  width: 95%;
+}
+
 .titleInfo {
   font-size: 20px;
   line-height: 32px;
@@ -536,7 +551,6 @@ form select {
 .swiper-button-next {
   margin-left: 5vh !important;
   float: left;
-
 }
 .swiper-button-prev {
   left: auto !important; /* Alinear a la izquierda */
@@ -560,7 +574,9 @@ form select {
   align-items: flex-end;
 }
 
-
+.swiper-button-disabled{
+  color: var(--gray-dark) !important;
+}
 
 #videoContainer iframe{
   width: 100%;

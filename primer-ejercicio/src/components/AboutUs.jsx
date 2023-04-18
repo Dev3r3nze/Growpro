@@ -38,10 +38,12 @@ class AboutUs extends Component {
         <div className="row mt-5 g-5 cardRow ancho justify-content-between">
             {tarjetas.map((tarjeta, index) => {
                 return (
-                    <div className="col-lg-5 col-12 infoCard" key={index}>
-                        <img src={tarjeta.icon} alt="" className="iconInfo" />
-                        <p className="titleInfo">{tarjeta.title}</p>
-                        <p className="textInfo">{tarjeta.text}</p>
+                    <div className="col-lg-6 col-12" key={index}>
+                        <div className="infoCard mx-2"> 
+                          <img src={tarjeta.icon} alt="" className="iconInfo" />
+                          <p className="titleInfo">{tarjeta.title}</p>
+                          <p className="textInfo">{tarjeta.text}</p>
+                        </div>
                     </div>
                 )
             })}

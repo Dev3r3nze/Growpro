@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,13 +21,13 @@ const VideoSection = () => {
           height="500"
           src="https://www.youtube.com/embed/kF0OtEH8Lo0"
           title="Sidney Australia - Maria Jose - Testimonio"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       ),
       alt: "Sidney Australia - Maria Jose - Testimonio",
-      video: "https://www.youtube.com/embed/kF0OtEH8Lo0"
+      video: "https://www.youtube.com/embed/kF0OtEH8Lo0",
     },
     {
       id: 1,
@@ -38,18 +38,18 @@ const VideoSection = () => {
           height="500"
           src="https://www.youtube.com/embed/A1UgYB2zVWg"
           title="Malta - Yonna Bernal Testimonio"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       ),
       alt: "Malta - Yonna Bernal Testimonio",
-      video: "https://www.youtube.com/embed/A1UgYB2zVWg"
+      video: "https://www.youtube.com/embed/A1UgYB2zVWg",
     },
   ];
 
   function MostrarVideo(pos) {
-    setPos(pos)
+    setPos(pos);
     var video = document.getElementById("videoFullScreen");
     video.style.display = "flex";
   }
@@ -58,10 +58,10 @@ const VideoSection = () => {
     video.style.display = "none";
   }
 
-  
-
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+
+
 
   return (
     <div className="w-100">
@@ -100,23 +100,29 @@ const VideoSection = () => {
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
             }}
-            swipeHandler={true}
             className="col-12"
+            loop={false}
+            onBeforeInit={(Swiper) => {
+              if (typeof Swiper.params.navigation !== "boolean") {
+              const navigation = Swiper.params.navigation;
+              navigation.prevEl = navigationPrevRef.current;
+              navigation.nextEl = navigationNextRef.current;
+              }
+              }}
           >
             {videos.map((video) => (
               <SwiperSlide key={video.id}>
                 <div className="slide-container">
-                  <img src={video.img} alt={video.alt} onClick={() => MostrarVideo(video.id)}/>
+                  <img src={video.img} alt={video.alt} onClick={()=> MostrarVideo(video.id)}/>
                 </div>
               </SwiperSlide>
             ))}
-           <div>
-            <div class="swiper-button-prev swiper-button-disabled" ref={navigationPrevRef}></div>
-            <div class="swiper-button-next" ref={navigationNextRef}></div>
-           </div>
+            <div>
+              <div className="swiper-button-prev swiper-button-disabled" ref={navigationPrevRef}></div>
+              <div className="swiper-button-next" ref={navigationNextRef}></div>
+            </div>
           </Swiper>
         </div>
-        
       </div>
 
       {/* Video Full Screen */}
