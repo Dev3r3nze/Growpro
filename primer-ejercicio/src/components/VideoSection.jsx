@@ -61,8 +61,6 @@ const VideoSection = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
-
-
   return (
     <div className="w-100">
       {/* Text */}
@@ -104,21 +102,28 @@ const VideoSection = () => {
             loop={false}
             onBeforeInit={(Swiper) => {
               if (typeof Swiper.params.navigation !== "boolean") {
-              const navigation = Swiper.params.navigation;
-              navigation.prevEl = navigationPrevRef.current;
-              navigation.nextEl = navigationNextRef.current;
+                const navigation = Swiper.params.navigation;
+                navigation.prevEl = navigationPrevRef.current;
+                navigation.nextEl = navigationNextRef.current;
               }
-              }}
+            }}
           >
             {videos.map((video) => (
               <SwiperSlide key={video.id}>
                 <div className="slide-container">
-                  <img src={video.img} alt={video.alt} onClick={()=> MostrarVideo(video.id)}/>
+                  <img
+                    src={video.img}
+                    alt={video.alt}
+                    onClick={() => MostrarVideo(video.id)}
+                  />
                 </div>
               </SwiperSlide>
             ))}
             <div>
-              <div className="swiper-button-prev swiper-button-disabled" ref={navigationPrevRef}></div>
+              <div
+                className="swiper-button-prev swiper-button-disabled"
+                ref={navigationPrevRef}
+              ></div>
               <div className="swiper-button-next" ref={navigationNextRef}></div>
             </div>
           </Swiper>

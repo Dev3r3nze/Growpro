@@ -55,7 +55,7 @@ class ExperienciaCards extends Component {
       {
         title:
           "Estudia Inglés general mientras disfrutas de las playas de Australia",
-        image: "../Recursos/card2.png",
+        image: "../Recursos/card3.png",
         enlaceBtn: "https://www.google.com",
         verMasTexto: "Ver más texto",
         topVentas: false,
@@ -71,19 +71,21 @@ class ExperienciaCards extends Component {
       var text = document.getElementsByClassName("textVer")[num];
       if (text.style.display == "flex") {
         text.style.display = "none";
-        document.getElementsByClassName('verMasIcon')[num].style.transform = 'rotate(0deg)';
+        document.getElementsByClassName("verMasIcon")[num].style.transform =
+          "rotate(0deg)";
       } else {
         text.style.display = "flex";
-        document.getElementsByClassName('verMasIcon')[num].style.transform = 'rotate(180deg)';
+        document.getElementsByClassName("verMasIcon")[num].style.transform =
+          "rotate(180deg)";
       }
     }
 
     return (
-      <div className="row g-5 justify-content-center" id="rowExperiencias">
+      <div className="row g-lg-1 g-5 justify-content-center" id="rowExperiencias">
         {/* Primera tarjeta */}
         {tarjetas.map((tarjeta, index) => {
           return (
-            <div className="col-lg-4 p-0 p-lg-4" key={index}>
+            <div className="col-lg-4 p-0 p-lg-3" key={index}>
               <div className="card">
                 {tarjeta.topVentas && (
                   <div className="topVentas ancho">

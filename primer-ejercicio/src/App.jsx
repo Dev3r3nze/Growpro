@@ -5,8 +5,6 @@ import FormRedChecks from "./components/FormRedChecks";
 import VideoSection from "./components/VideoSection";
 
 function App() {
-  
-
   return (
     <div className="App">
       {/* Imagen de fondo */}
@@ -48,8 +46,8 @@ function App() {
         <div id="line" />
       </header>
       {/* Formulario + checks */}
-      <div className="section">
-          <FormRedChecks/>
+      <div className="section mt-5" >
+        <FormRedChecks />
       </div>
       {/* Sección experiencias */}
       <div className="section">
@@ -62,14 +60,14 @@ function App() {
           tan pronto como sea posible.
         </p>
         {/* Fila de tarjetas */}
-        <ExperienciaCards/>
+        <ExperienciaCards />
       </div>
       {/* Sección que hace diferente */}
-      <AboutUs/>
+      <AboutUs />
 
       {/* Sección video */}
       <div className="section" id="videoSection">
-        <VideoSection/>
+        <VideoSection />
       </div>
       {/* Sección CTA */}
       <div className="dividerText" id="lastCTA">
@@ -85,7 +83,7 @@ function App() {
         <button className="btnPrincipal">QUIERO MÁS INFO</button>
       </div>
       {/* Footer */}
-      <footer className="row text-center container-fluid" id="footer">
+      <footer className="row text-center " id="footer">
         <div className="footerText col-md-6 col-12 order-2 order-md-1">
           <p>©2021 GrowPro • Todos los derechos reservados</p>
         </div>
@@ -109,8 +107,6 @@ function App() {
   );
 }
 
-
-
 // Aparece a y desaparece al hacer scroll hacia arriba o abajo
 {
   addEventListener(
@@ -124,7 +120,10 @@ function App() {
       window.addEventListener("scroll", function () {
         var currentScrollPosition = window.scrollY;
 
-        if (currentScrollPosition > lastScrollPosition && window.innerWidth > 768 ) {
+        if (
+          currentScrollPosition > lastScrollPosition &&
+          window.innerWidth > 768
+        ) {
           // Scrolling hacia abajo
           header.classList.add("headerLogoHidden");
           btnHeader.classList.add("headerLogoHidden");
@@ -133,7 +132,7 @@ function App() {
           header.classList.remove("headerLogoHidden");
           btnHeader.classList.remove("headerLogoHidden");
         }
-        if(currentScrollPosition < 500){
+        if (currentScrollPosition < 500) {
           btnHeader.classList.add("headerLogoHidden");
         }
 
@@ -151,8 +150,5 @@ addEventListener("resize", () => {
     document.getElementById("bckimg").src = "../Recursos/background.png";
   }
 });
-
-
-
 
 export default App;

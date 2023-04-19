@@ -45,7 +45,7 @@ a {
 
 .textTiny {
   font-size: 14px;
-  letter-spacing: 0.4px
+  letter-spacing: 0.4px;
 }
 
 .textFino {
@@ -98,7 +98,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   text-align: center;
   margin: auto;
   margin-top: 7vh;
@@ -110,7 +110,7 @@ a {
   margin: auto;
   margin-top: 10vh;
   align-items: center;
-  width: 80%;
+  width: 81%;
   flex-direction: column;
 }
 
@@ -242,16 +242,18 @@ a {
   font-weight: 500;
 }
 
-#redChecks{
-  padding-left: 4vh;
+#redChecks {
+  padding-left: 2vh;
+  padding-right: 0;
 }
 
-.checksForm div{
+.checksForm div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 2vh 0;
 }
-.checksForm img{
+.checksForm img {
   margin-right: 1vh;
 }
 
@@ -300,7 +302,6 @@ form select {
   transform: translateX(-30px);
 }
 
-
 #checkTerms {
   -webkit-appearance: none;
   appearance: none;
@@ -331,7 +332,7 @@ form select {
   align-items: center;
 }
 
-#btnForm{
+#btnForm {
   letter-spacing: 0.05em;
   color: var(--white);
 }
@@ -345,7 +346,6 @@ form select {
 #sectionExp {
   text-align: left;
 }
-
 
 .card {
   display: flex;
@@ -409,6 +409,7 @@ form select {
   font-size: 22px;
   line-height: 30px;
   color: var(--black-light);
+  margin-bottom: 15px;
 }
 
 .precioCard {
@@ -507,6 +508,9 @@ form select {
 #sectionDiff {
   margin-top: 4vh;
 }
+#sectionDiff strong{
+  margin-bottom: 2vh;
+}
 
 .infoCard {
   display: flex;
@@ -527,7 +531,7 @@ form select {
   min-height: 80px;
 }
 
-.textInfo{
+.textInfo {
   min-height: 8rem;
   width: 95%;
 }
@@ -548,6 +552,9 @@ form select {
 }
 
 /* -------------------Sección vídeo------------------- */
+#videoSection {
+  margin-top: 9vh;
+}
 .swiper-button-next {
   margin-left: 5vh !important;
   float: left;
@@ -555,30 +562,33 @@ form select {
 .swiper-button-prev {
   left: auto !important; /* Alinear a la izquierda */
   float: left;
-
 }
-.swiper-button-next,.swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
   color: var(--purple) !important;
   position: initial !important;
   margin-top: 15px !important;
 }
+.swiper-button-next::after, .swiper-button-prev::after {
+  transform: scale(0.6);
+}
 
-.slide-container img{
+.slide-container img {
   width: 100%;
   border-radius: 20px;
 }
-.swiper{
+.swiper {
   margin-top: 5vh;
   display: flex !important;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.swiper-button-disabled{
+.swiper-button-disabled {
   color: var(--gray-dark) !important;
 }
 
-#videoContainer iframe{
+#videoContainer iframe {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -603,7 +613,6 @@ form select {
   margin-top: 3vh;
   border-radius: 20px;
 }
-
 
 #videoFullScreen {
   position: fixed;
@@ -650,6 +659,7 @@ form select {
   align-items: center;
   background: rgba(217, 217, 217, 0.3);
   border: 1px solid #d9d9d9;
+  --bs-gutter-x: 0;
 }
 footer p,
 footer a {
@@ -668,9 +678,9 @@ footer a:hover {
     z-index: 2;
     top: 0;
   }
-  #headerText{
+  #headerText {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("../Recursos/headerMobile.png");
+      url("../Recursos/headerMobile.png");
   }
   #btnHeaderMobile {
     display: flex;
@@ -717,6 +727,7 @@ footer a:hover {
   }
   #videoSection {
     width: 90%;
+    margin-top: 4ch;
   }
   #titleVideo {
     text-align: left;
@@ -734,6 +745,7 @@ footer a:hover {
     height: 12vh;
     margin-left: 0;
     align-content: center;
+    margin-top: 4vh;
   }
   #footer div {
     margin-top: 1vh;
@@ -742,13 +754,13 @@ footer a:hover {
   #btnChecks {
     display: block;
   }
-  #logoImg{
+  #logoImg {
     height: 20%;
   }
-  #btnForm{
+  #btnForm {
     width: 100%;
   }
-  #rowExperiencias{
+  #rowExperiencias {
     width: 100%;
   }
   .checksForm img {
@@ -758,9 +770,30 @@ footer a:hover {
   .checksForm {
     margin-bottom: 1vh;
   }
-  #redChecks{
+  .checksForm div{
+    margin: 1vh 0;
+  }
+  #redChecks {
     padding: 0;
     margin-bottom: 1vh;
-
+  }
+  .btnHeaderStyle{
+    padding: 10px 30px;
+  }
+  .cardRow > div.col-12{
+    padding: 0;
+  }
+  .infoCard{
+    padding: 20px 30px;
+  }
+  .swiper{
+    margin-top: 2vh;
+  }
+  .swiper-button-next{
+    margin-left: 1vh !important;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    transform: scale(0.8);
+    margin-top: 10px !important;
   }
 }
