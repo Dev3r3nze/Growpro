@@ -1,0 +1,163 @@
+/* -------------------Sección experiencias------------------- */
+
+#sectionExp {
+  text-align: left;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50px 50px 20px 20px;
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.1));
+  background: #ffffff00;
+  transition: all 0.2s ease;
+}
+.card:hover,
+.infoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cardFondo {
+  background-color: var(--white);
+  border-radius: 0 0 20px 20px;
+}
+
+.cardOff {
+  font-weight: 800;
+  line-height: 30px;
+  text-align: center;
+  color: var(--white);
+  align-self: flex-end;
+  transform: translateY(4vh);
+  background: var(--black-light);
+  border: 1px solid #ffffff;
+  border-radius: 20px 0 0 20px;
+  padding: 0.1vh 1vh;
+  position: absolute;
+  top: 0;
+}
+
+.topVentas {
+  background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  padding: 2px 35px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.topVentas p {
+  line-height: 30px;
+  color: var(--white);
+  margin: 0;
+}
+
+.cardBody {
+  padding: 20px 30px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--black-light);
+  margin-bottom: 15px;
+}
+
+.precioCard {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-dark);
+}
+.precioCard strong {
+  color: var(--purple-darker);
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.btnCard {
+  background: var(--purple);
+  border-radius: 500px;
+  border: 0;
+  padding: 1vh;
+}
+
+.btnCard p {
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0;
+}
+
+.verMasCard {
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: var(--purple);
+  margin: 0;
+}
+
+.verMasController {
+  display: flex;
+  align-items: center;
+}
+
+.verMasIcon {
+  width: 15px;
+  margin-left: 1vh;
+}
+
+.divider {
+  border: 1px solid var(--gray-dark);
+  margin: 1vh 0;
+}
+
+.validezText {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--purple-darker);
+}
+
+.textVer {
+  display: none;
+}
+
+.validezIcon {
+  width: 15px;
+  margin-right: 1vh;
+}
+
+.verMasDiv {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.validezDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #rowExperiencias {
+    width: 100%;
+  }
+
+  .cardRow > div.col-12 {
+    padding: 0;
+  }
+}

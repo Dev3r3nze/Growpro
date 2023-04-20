@@ -1,0 +1,136 @@
+/* -------------------Header------------------- */
+#bckimg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.headerLogo {
+  background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  justify-content: space-between;
+  top: 0;
+  transition: all 0.25s ease;
+}
+
+.headerLogoHidden {
+  top: -90px;
+}
+
+#logoImg {
+  height: 30%;
+  margin-left: 4vh;
+}
+
+#headerText {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../Recursos/HeaderImg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  -webkit-clip-path: url(#gp-header-default-mask);
+}
+
+#headerTitle {
+  width: 77%;
+  line-height: 70px;
+  font-size: 50px;
+  isolation: isolate;
+}
+
+#titleSpecial {
+  background: var(--red);
+  border-radius: 50px;
+  padding: 3px 13px;
+}
+
+#btnHeaderMobile {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 10px;
+  margin-right: 2vh;
+  position: relative;
+}
+
+.btnHeaderStyle {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background: var(--white);
+  border-radius: 50px;
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.btnHeaderStyle:hover {
+  background: #f9f9f9;
+}
+
+.btnHeader.mostrar {
+  opacity: 1;
+}
+
+.btnHeaderStyle p {
+  margin-bottom: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7a33cc;
+}
+
+#line {
+  width: 100%;
+  height: 20vh;
+  background: url("../Recursos/Line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-70%);
+}
+
+@media only screen and (max-width: 768px) {
+  #headerLogo {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+  }
+  #headerText {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url("../Recursos/headerMobile.png");
+  }
+  #btnHeaderMobile {
+    display: flex;
+  }
+  #headerTitle {
+    font-size: 30px;
+    line-height: 45px;
+    width: 87%;
+  }
+  #btnHeaderMobile {
+    margin-right: 1vh;
+  }
+  #logoImg {
+    height: 20%;
+  }
+
+  .btnHeaderStyle {
+    padding: 10px 30px;
+  }
+  #logoImg {
+    margin-left: 1vh;
+  }
+}

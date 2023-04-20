@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import "./VideoSlider.css";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -48,11 +49,13 @@ const VideoSection = () => {
     },
   ];
 
+  // Funcion para mostrar el video seleccionado con el slider en pantalla completa
   function MostrarVideo(pos) {
     setPos(pos);
     var video = document.getElementById("videoFullScreen");
     video.style.display = "flex";
   }
+  // Funcion para ocultar el video seleccionado con el slider en pantalla completa
   function OcultarVideo() {
     var video = document.getElementById("videoFullScreen");
     video.style.display = "none";
@@ -63,7 +66,7 @@ const VideoSection = () => {
 
   return (
     <div className="w-100">
-      {/* Text */}
+      {/* Título */}
       <div id="videoText">
         <p id="titleVideo" className="textGrande textFino">
           Conoce más opiniones de los <strong>grower por el mundo</strong>
@@ -74,21 +77,7 @@ const VideoSection = () => {
         </p>
       </div>
 
-      {/*Video  */}
-      {/* <div id="videoDiv">
-          <img
-            src={videos[pos].img}
-            onClick={() => MostrarVideo()}
-            alt=""
-            className="ancho"
-          />
-
-          
-          <div>
-            <img src="Recursos/prevVideo.png" alt="" onClick={() => PrevVideo()}/>
-            <img src="Recursos/nextVideo.png" alt="" onClick={() => NextVideo()}/>
-          </div>
-        </div> */}
+      {/* Slider */}
       <div className="row" id="videoDiv">
         <div className="col-12 justify-content-end">
           <Swiper
@@ -108,6 +97,7 @@ const VideoSection = () => {
               }
             }}
           >
+            {/* Slides */}
             {videos.map((video) => (
               <SwiperSlide key={video.id}>
                 <div className="slide-container">
@@ -134,6 +124,7 @@ const VideoSection = () => {
       <div id="videoFullScreen" className="ancho">
         <div id="videoContainer" className="ancho">
           <div id="videoClose" onClick={() => OcultarVideo()}>
+            {/* Video incrustado de youtube */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="26"

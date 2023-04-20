@@ -1,0 +1,91 @@
+/* -------------------Sección fomulario------------------- */
+#formSectionRow {
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 30px;
+  background: var(--white);
+  border-radius: 20px;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.15));
+  font-weight: 500;
+}
+
+#redChecks {
+  padding-left: 2vh;
+  padding-right: 0;
+}
+
+.checksForm div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2vh 0;
+}
+.checksForm img {
+  margin-right: 1vh;
+}
+
+.checksForm p {
+  width: 90%;
+  margin-bottom: 0;
+}
+
+form label {
+  letter-spacing: 0.4px;
+  color: #2f343d;
+}
+form input,
+form select {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px;
+  background: var(--white);
+  border: 1px solid var(--gray-dark);
+  border-radius: 10px;
+  width: 100%;
+}
+
+form select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../Recursos/Vector.png");
+  background-repeat: no-repeat;
+  background-position: right 35px center;
+  padding-right: 25px;
+}
+@media (max-width: 576px) {
+  .mt-xs-4 {
+    margin-top: 1.5rem !important;
+  }
+}
+@media (min-width: 1800px) {
+  #colTerms {
+    width: 8.33%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #termsText {
+    margin: 0;
+    transform: translateX(-30px);
+  }
+  #formSectionRow {
+    padding: 0px 5px;
+  }
+  #form {
+    padding: 25px 15px;
+  }
+  form select {
+    background-position: right 10px center;
+  }
+  #termsText {
+    transform: translateX(-17px);
+  }
+  #btnForm {
+    width: 100%;
+  }
+}

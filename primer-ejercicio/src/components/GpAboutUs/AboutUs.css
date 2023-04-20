@@ -1,0 +1,55 @@
+/* -------------------Sección About Us------------------- */
+#titleInfo,
+#titleInfoStrong {
+  margin: 0;
+}
+
+#sectionDiff {
+  margin-top: 4vh;
+}
+#sectionDiff strong {
+  margin-bottom: 2vh;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 45px;
+  background: var(--white);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.infoCard * {
+  margin: 1vh 0;
+}
+
+.iconInfo {
+  min-height: 80px;
+}
+
+.textInfo {
+  min-height: 8rem;
+  width: 95%;
+}
+
+.titleInfo {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #sectionDiff {
+    width: 90%;
+  }
+  #sectionDiff .dividerText {
+    width: 100%;
+  }
+
+  .infoCard {
+    padding: 20px 30px;
+  }
+}
