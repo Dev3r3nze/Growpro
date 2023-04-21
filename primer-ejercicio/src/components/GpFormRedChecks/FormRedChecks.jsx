@@ -5,6 +5,13 @@ import "./FormRedChecks.css";
 
 class FormRedChecks extends Component {
   render() {
+
+    const texts=[
+    "Sorteo de unas Súper Becas para todos nuestros destinos", 
+    "Lorem Ipsum es simplemente el texto de relleno de las imprentas.", 
+    "Lorem Ipsum es simplemente el texto de relleno de las imprentas.", 
+    "Lorem Ipsum es simplemente el texto de relleno de las imprentas."]
+
     return (
       <div className="row g-4 w-100" id="formSectionRow">
         {/* Columna formulario */}
@@ -13,7 +20,7 @@ class FormRedChecks extends Component {
         </div>
         {/* Columna textos */}
         <div className="col-lg-6 order-lg-2 order-1" id="redChecks">
-          <LoremRedChecks />
+          <LoremRedChecks texts={texts}/>
         </div>
       </div>
     );
@@ -21,3 +28,4 @@ class FormRedChecks extends Component {
 }
 
 export default FormRedChecks;
+

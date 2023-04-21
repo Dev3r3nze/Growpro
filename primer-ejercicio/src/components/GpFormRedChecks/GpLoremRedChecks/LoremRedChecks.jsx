@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./LoremRedCheks.css";
 
-class LoremRedChecks extends Component {
-  render() {
+function LoremRedChecks (props) {
+
     return (
       <div>
         {/* Título */}
@@ -11,26 +11,16 @@ class LoremRedChecks extends Component {
           <strong>las imprentas</strong>
         </h1>
         <div className="checksForm">
-          {/* Check 1 */}
-          <div className="textPequeño textFino">
-            <img src="Recursos\icons-check.png" alt="" />
-            <p>Sorteo de unas Súper Becas para todos nuestros destinos</p>
-          </div>
-          {/* Check 2 */}
-          <div className="textPequeño textFino">
-            <img src="Recursos\icons-check.png" alt="" />
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-          </div>
-          {/* Check 3 */}
-          <div className="textPequeño textFino">
-            <img src="Recursos\icons-check.png" alt="" />
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-          </div>
-          {/* Check 4 */}
-          <div className="textPequeño textFino">
-            <img src="Recursos\icons-check.png" alt="" />
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas.</p>
-          </div>
+
+          {/* Checks */}
+          {props.texts.map((text, index) => {
+            return (
+              <div className="textPequeño textFino" key={index}>
+                <img src="Recursos\icons-check.png" alt="" />
+                <p>{text}</p>
+              </div>
+            )
+          })}
         </div>
         {/* Botón */}
         <button className="btnPrincipal" id="btnChecks">
@@ -39,6 +29,5 @@ class LoremRedChecks extends Component {
       </div>
     );
   }
-}
 
 export default LoremRedChecks;

@@ -5,6 +5,8 @@ import FormRedChecks from "./components/GpFormRedChecks/FormRedChecks";
 import VideoSection from "./components/GpVideoSlider/VideoSection";
 import Header from "./components/GpHeader/Header";
 import Footer from "./components/GpFooter/Footer";
+import StatsChecks from "./components/GpStatsChecks/StatsChecks";
+import Dividier from "./components/GpDivider/Dividier";
 
 function App() {
   return (
@@ -27,24 +29,22 @@ function App() {
       
       {/* Sección que hace diferente */}
       <AboutUs />
+      <Dividier 
+      title={<strong className="textGrande">¡Y mucho más!</strong>} 
+      text={"Dinos en qué quieres formarte y te ayudamos a dar un salto en tu carrera. Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500 ."}
+      />
 
       {/* Sección video */}
       <div className="section" id="videoSection">
         <VideoSection />
       </div>
       {/* Sección CTA */}
-      <div className="dividerText" id="lastCTA">
-        <p id="titleYMás" className="textGrande textFino">
-          ¿Te unes a nuestra <strong>comunidad grower?</strong>
-        </p>
-        <p className="textPequeño textFino">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,when an unknown printer took a galley of type and
-          scrambled it to make a type pecimen book.
-        </p>
-        <button className="btnPrincipal">QUIERO MÁS INFO</button>
-      </div>
+      <Dividier 
+      title={<p>¿Te unes a nuestra <strong>comunidad grower?</strong></p>} 
+      text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type pecimen book."}
+      />
+      {/* Section nueva */}
+      <StatsChecks/>
       {/* Footer */}
       <Footer />
     </div>

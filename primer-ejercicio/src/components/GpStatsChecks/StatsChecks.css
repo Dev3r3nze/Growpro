@@ -1,0 +1,9 @@
+.statsChecks{
+    flex-direction: row;
+}
+.imgStat{
+    padding: 0;
+}
+#redCheks{
+    padding-left: 2vh;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./AboutUs.css";
+import Dividier from "../GpDivider/Dividier";
 
 class AboutUs extends Component {
   render() {
@@ -47,16 +48,6 @@ class AboutUs extends Component {
               </div>
             );
           })}
-        </div>
-        <div className="dividerText">
-          <strong className="textGrande">¡Y mucho más!</strong>
-          <p className="textPequeño textFino">
-            Dinos en qué quieres formarte y te ayudamos a dar un salto en tu
-            carrera. Lorem Ipsum es simplemente el texto de relleno de las
-            imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
-            relleno estándar de las industrias desde el año 1500 .
-          </p>
-          <button className="btnPrincipal">QUIERO MÁS INFO</button>
         </div>
       </div>
     );

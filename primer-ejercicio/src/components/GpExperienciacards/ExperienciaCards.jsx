@@ -1,73 +1,9 @@
 import React, { Component } from "react";
 import "./ExperienciaCards.css";
-
+import tarjetas from "./BbddTarjetas.json";
 class ExperienciaCards extends Component {
   render() {
     // Tarjetas
-    const tarjetas = [
-      {
-        title: "Estudia Medio Ambiente en Sidney",
-        image: "../Recursos/card1.png",
-        enlaceBtn: "https://www.google.com",
-        verMasTexto: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa",
-        topVentas: true,
-        enOferta: true,
-        oferta: 70,
-        precio: 8800,
-        precioOferta: 2640,
-        vlidezOferta: "Válido hasta el 25/02/2023",
-      },
-      {
-        title: "Estudia Medio Ambiente en Sidney",
-        image: "../Recursos/card2.png",
-        enlaceBtn: "https://www.google.com",
-        verMasTexto: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa",
-        topVentas: false,
-        enOferta: false,
-        oferta: 70,
-        precio: 8800,
-        precioOferta: 2640,
-        vlidezOferta: "Válido hasta el 25/02/2023",
-      },
-      {
-        title:
-          "Estudia Inglés general mientras disfrutas de las playas de Australia",
-        image: "../Recursos/card3.png",
-        enlaceBtn: "https://www.google.com",
-        verMasTexto: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa",
-        topVentas: false,
-        enOferta: false,
-        oferta: 70,
-        precio: 8800,
-        precioOferta: 2640,
-        vlidezOferta: "Válido hasta el 25/02/2023",
-      },
-      {
-        title: "Estudia Medio Ambiente en Sidney",
-        image: "../Recursos/card1.png",
-        enlaceBtn: "https://www.google.com",
-        verMasTexto: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa",
-        topVentas: true,
-        enOferta: true,
-        oferta: 70,
-        precio: 8800,
-        precioOferta: 2640,
-        vlidezOferta: "Válido hasta el 25/02/2023",
-      },
-      {
-        title:
-          "Estudia Inglés general mientras disfrutas de las playas de Australia",
-        image: "../Recursos/card3.png",
-        enlaceBtn: "https://www.google.com",
-        verMasTexto: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos, vel temporibus nihil est dicta culpa",
-        topVentas: false,
-        enOferta: false,
-        oferta: 70,
-        precio: 8800,
-        precioOferta: 2640,
-        vlidezOferta: "Válido hasta el 25/02/2023",
-      },
-    ];
 
     // Función para mostrar más texto
     function MostrarMas(num) {
@@ -101,7 +37,7 @@ class ExperienciaCards extends Component {
             id="rowExperiencias"
           >
             {/* Tarjetas */}
-            {tarjetas.map((tarjeta, index) => {
+            {tarjetas.tarjetas.map((tarjeta, index) => {
               return (
                 // Columna
                 <div className="col-lg-4 p-0 p-lg-3" key={index}>
