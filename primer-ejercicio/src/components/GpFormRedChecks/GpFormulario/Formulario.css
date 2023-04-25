@@ -19,20 +19,7 @@
   padding-right: 0;
 }
 
-.checksForm div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 2vh 0;
-}
-.checksForm img {
-  margin-right: 1vh;
-}
 
-.checksForm p {
-  width: 90%;
-  margin-bottom: 0;
-}
 
 form label {
   letter-spacing: 0.4px;

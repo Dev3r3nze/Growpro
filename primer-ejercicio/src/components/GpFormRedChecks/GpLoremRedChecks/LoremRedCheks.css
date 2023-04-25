@@ -27,7 +27,20 @@
   justify-content: center;
   align-items: center;
 }
+.checksForm div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 25px 0;
+}
+.checksForm img {
+  margin-right: 1vh;
+}
 
+.checksForm p {
+  width: 90%;
+  margin-bottom: 0;
+}
 #btnForm {
   letter-spacing: 0.05em;
   color: var(--white);
