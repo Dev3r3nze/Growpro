@@ -20,6 +20,7 @@ const ImageStats = (props) =>  {
                 : 
                 <div><p>Loading...</p></div>
             }
+            
             </div>
         );
 }
