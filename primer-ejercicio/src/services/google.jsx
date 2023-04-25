@@ -11,6 +11,5 @@ export const useGetData = () => {
   return { data, getData };
 };
 
-
-//Top ventas tapa oferta
-//AboutUs no tiene misma altura 
+// no es necesario el estado
+// probar retrun solo data
