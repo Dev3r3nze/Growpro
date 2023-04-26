@@ -7,8 +7,12 @@ import Header from "./components/GpHeader/Header";
 import Footer from "./components/GpFooter/Footer";
 import StatsChecks from "./components/GpStatsChecks/StatsChecks";
 import Dividier from "./components/GpDivider/Dividier";
+import HeaderAlto from "./components/GpHeaderAlto/HeaderAlto";
 
 function App() {
+
+  const headerAlto = true;
+
   return (
     <div className="App">
       {/* Imagen de fondo */}
@@ -18,8 +22,9 @@ function App() {
         className="ancho"
         id="bckimg"
       />
+      
       {/* Header */}
-      <Header />
+      {headerAlto ? <HeaderAlto /> : <Header />}
       {/* Formulario + checks */}
       <div className="section mt-5" id="formSection">
         <FormRedChecks />

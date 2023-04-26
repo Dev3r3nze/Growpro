@@ -1,0 +1,12 @@
+.barra{
+    width: 100%;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.5);
+    background-color: rgb(255,193,7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anuncioText{
+    width: 70%;
+    display: flex;
+}

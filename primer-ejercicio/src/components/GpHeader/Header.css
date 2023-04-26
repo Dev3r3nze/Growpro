@@ -7,18 +7,19 @@
 
 .headerLogo {
   background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
-  height: 70px;
+  height: 130px;
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 2;
   justify-content: space-between;
-  top: 0;
+  top: 0px;
   transition: all 0.25s ease;
+  flex-direction: column;
 }
 
 .headerLogoHidden {
-  top: -90px;
+  top: -150px;
 }
 
 #logoImg {
@@ -26,7 +27,17 @@
   margin-left: 4vh;
 }
 
+.headerCosas{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #headerText {
+  margin-top: 0px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     url("../Recursos/HeaderImg.png");
   background-position: center center;
@@ -107,6 +118,7 @@
     position: fixed;
     z-index: 2;
     top: 0;
+    height: 160px;
   }
   #headerText {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),

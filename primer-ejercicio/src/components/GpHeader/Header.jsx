@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Anuncio from "../GpAd/Anuncio";
+
 import "./Header.css";
 
 class Header extends Component {
@@ -38,12 +40,17 @@ class Header extends Component {
 
     return (
       <header className="App-header">
+        
         {/* Barra + logo */}
-        <div className="container-fluid headerLogo" id="headerLogo">
-          <img src="Recursos/LOGO 1.png" alt="logo grow pro" id="logoImg"></img>
-          <button id="btnHeaderMobile" className="btnHeaderStyle">
-            <p className="textMedio">QUIERO MÁS INFO</p>
-          </button>
+        <div className="w-100 headerLogo" id="headerLogo">
+          {/* Anuncio */}
+          <Anuncio />
+          <div className="headerCosas">
+            <img src="Recursos/LOGO 1.png" alt="logo grow pro" id="logoImg"></img>
+            <button id="btnHeaderMobile" className="btnHeaderStyle">
+              <p className="textMedio">QUIERO MÁS INFO</p>
+            </button>
+          </div>
         </div>
         {/* Header+CTA */}
         <div className="container-fluid" id="headerText">

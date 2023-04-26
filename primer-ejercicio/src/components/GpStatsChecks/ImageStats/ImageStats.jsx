@@ -1,14 +1,25 @@
 import React, { Component, useEffect } from 'react';
 import Stats from './Stats/Stats';
-import { useGetData } from '../../../services/google.jsx';
+import { fetchData } from '../../../services/google.jsx';
 
 const ImageStats = (props) =>  {
         
-        const { data, getData } = useGetData();
+        // const { data, getData } = useGetData();
+        const [data, setData] = React.useState(null);
 
+        const GetData = () => {
+            fetchData().then((data) => {
+                setData(data);
+            });
+          };
+        
         useEffect(() => {
-            getData();
+            GetData();
         }, []);
+        
+        // useEffect(() => {
+        //     getData();
+        // }, []);
 
         return (
             <div className='row justify-content-center'>
