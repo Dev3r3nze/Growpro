@@ -95,16 +95,7 @@ a {
   background: var(--purple-light-dark);
 }
 
-.dividerText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  text-align: center;
-  margin: auto;
-  margin-top: 7vh;
-}
+
 
 .section {
   display: flex;
@@ -151,14 +142,7 @@ a {
     margin-top: 3vh;
   }
  
-  .dividerText {
-    width: 100%;
-  }
   
-  #lastCTA {
-    margin-top: 0;
-    width: 90%;
-  }
   
 }
 

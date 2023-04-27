@@ -1,0 +1,51 @@
+.cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+.ctaImg #titleYMás{
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.ctaImg img{
+    border-radius: 50px;
+    
+}
+
+.ctaImg button{
+    margin: auto;
+    width: 50%;
+}
+.ctaImg{
+    width: 90%;
+}
+.dividerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-top: 7vh;
+  }
+
+@media (max-width: 768px){
+    .ctaImg{
+        width: 100%;
+    }
+    .ctaImg button{
+        width: 85%;
+    }
+    .dividerText {
+        width: 100%;
+    }
+    
+    .lastCTA {
+        margin-top: 0;
+        width: 90%;
+    }
+}

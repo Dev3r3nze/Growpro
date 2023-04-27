@@ -5,6 +5,7 @@ import "./Header.css";
 
 class Header extends Component {
   render() {
+    const anucio = false;
 
     // Ocultar o mostrar header al hacer scroll
     addEventListener(
@@ -33,7 +34,9 @@ class Header extends Component {
           }
 
           lastScrollPosition = currentScrollPosition;
+          
         });
+        if(anucio) document.getElementById("headerLogo").style.height = "130px"
       },
       false
     );
@@ -44,7 +47,7 @@ class Header extends Component {
         {/* Barra + logo */}
         <div className="w-100 headerLogo" id="headerLogo">
           {/* Anuncio */}
-          <Anuncio />
+          {anucio && <Anuncio />}
           <div className="headerCosas">
             <img src="Recursos/LOGO 1.png" alt="logo grow pro" id="logoImg"></img>
             <button id="btnHeaderMobile" className="btnHeaderStyle">
