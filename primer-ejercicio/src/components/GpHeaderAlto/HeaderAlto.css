@@ -7,18 +7,17 @@
 }
 
 .logoDiv{
-    position: fixed;
-    left: 0;
-    top: 0;
+    position: absolute;
     width: 100%;
     z-index: 99;
     transition: all 0.25s;
 }
 
 .logoImg{
+    width: 18%;
     margin-left: 0;
-    width: 20%;
 }
+
 .headerAlto path{
     fill: white;
 }
@@ -30,15 +29,17 @@
     background-repeat: no-repeat;
     margin-bottom: -7vh;
     clip-path: url(#mask-image-desktop);
+    position: absolute;
+    width: 50%;
+    top: 0;
+    height: 53%;
+    left: 50%;
 }
 .containerHeader {
-    display: flex;
-    justify-content: center;
     margin-top: 9vh;
 }
 .rowGrande{
-    width: 73%;
-    margin-left: 3vh;
+    width: 91%;
 }
 
 h1{
@@ -106,7 +107,9 @@ h1{
     }
     .logoDiv{
         background-color: white;
-
+        position: fixed;
+        left: 0;
+        top: 0;
     }
     .logoImg{
         width: 50%;

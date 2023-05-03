@@ -11,7 +11,7 @@ import HeaderAlto from "./components/GpHeaderAlto/HeaderAlto";
 
 function App() {
 
-  const headerAlto = false;
+  const headerAlto = true;
 
   const horasHeader = ["18:00h", "19:00h", "20:00h", "21:00h"]
   const fechaHeader = "04 de mayo"
