@@ -18,7 +18,10 @@ class Header extends Component {
         window.addEventListener("scroll", function () {
           var currentScrollPosition = window.scrollY;
 
-          if (currentScrollPosition > lastScrollPosition && window.innerWidth > 768) {
+          if (
+            currentScrollPosition > lastScrollPosition &&
+            window.innerWidth > 768
+          ) {
             // Scrolling hacia abajo (ocultar)
             header.classList.add("headerLogoHidden");
             btnHeader.classList.add("headerLogoHidden");
@@ -34,22 +37,25 @@ class Header extends Component {
           }
 
           lastScrollPosition = currentScrollPosition;
-          
         });
-        if(anucio) document.getElementById("headerLogo").style.height = "130px"
+        if (anucio)
+          document.getElementById("headerLogo").style.height = "130px";
       },
       false
     );
 
     return (
       <header className="App-header">
-        
         {/* Barra + logo */}
         <div className="w-100 headerLogo" id="headerLogo">
           {/* Anuncio */}
           {anucio && <Anuncio />}
           <div className="headerCosas">
-            <img src="Recursos/LOGO 1.png" alt="logo grow pro" id="logoImg"></img>
+            <img
+              src="Recursos/LOGO 1.png"
+              alt="logo grow pro"
+              id="logoImg"
+            ></img>
             <button id="btnHeaderMobile" className="btnHeaderStyle">
               <p className="textMedio">QUIERO MÁS INFO</p>
             </button>

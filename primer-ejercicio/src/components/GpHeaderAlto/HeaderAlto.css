@@ -1,147 +1,148 @@
 .headerAlto {
   background: linear-gradient(83.33deg, var(--purple-dark) 0%, var(--red) 100%);
-    color: white;
-    padding-bottom: 7vh;
-    clip-path: url(#gp-header-default-mask);
-    margin: 0;
+  color: white;
+  padding-bottom: 7vh;
+  clip-path: url(#gp-header-default-mask);
+  margin: 0;
 }
 
-.logoDiv{
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-    transition: all 0.25s;
+.logoDiv {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.25s;
 }
 
-.logoImg{
-    width: 18%;
-    margin-left: 0;
+.logoImg {
+  width: 18%;
+  margin-left: 0;
+  padding-left: calc(var(--bs-gutter-x) * .5);
 }
 
-.headerAlto path{
-    fill: white;
+.headerAlto path {
+  fill: white;
 }
 
-.img-cover{
-    background-image: url(https://campaign.growproexperience.com/hubfs/barcelona.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: -7vh;
-    clip-path: url(#mask-image-desktop);
-    position: absolute;
-    width: 50%;
-    top: 0;
-    height: 53%;
-    left: 50%;
+.img-cover {
+  background-image: url(https://campaign.growproexperience.com/hubfs/barcelona.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -7vh;
+  clip-path: url(#mask-image-desktop);
+  position: absolute;
+  width: 50%;
+  top: 0;
+  height: 63%;
+  left: 50%;
 }
 .containerHeader {
-    margin-top: 9vh;
+  margin-top: 9vh;
 }
-.rowGrande{
-    width: 91%;
+.rowGrande {
+  width: 91%;
 }
 
-h1{
-    font-size: 3.125rem;
-    line-height: 1.25;
-    font-weight: 500;
+h1 {
+  font-size: 3.125rem;
+  line-height: 1.25;
+  font-weight: 500;
 }
-.subtitle{
-    font-size: 1.25rem;
-    line-height: 1.75;
-    font-weight: 500;
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  font-weight: 500;
 }
-.subtitle b{
-    font-size: 1rem;
+.subtitle b {
+  font-size: 1rem;
 }
-.card{
-    border-radius: 10px;
+.card {
+  border-radius: 10px;
 }
-.headerAlto .card div{
-    width: 100%;
+.headerAlto .card div {
+  width: 100%;
 }
 .headerAlto .card p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-.card-icon img{
-    width: 52px;
-    margin: auto;
+.card-icon img {
+  width: 52px;
+  margin: auto;
 }
-.cardText{
-    margin-bottom: 0;
-    margin-top: 1.05rem;
-    font-weight: 600;
+.cardText {
+  margin-bottom: 0;
+  margin-top: 1.05rem;
+  font-weight: 600;
 }
-.formSelect{
-    background-color: transparent;
-    background-position: right 0 center;
-    border: 0;
-    color: #2f343d;    
-    background-size: 15px 10px;
-    cursor: pointer;
-    font-weight: 600;
-    width: 100%;
-    text-align: center;
+.formSelect {
+  background-color: transparent;
+  background-position: right 0 center;
+  border: 0;
+  color: #2f343d;
+  background-size: 15px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
 }
-.headerAlto .btnHeaderStyle{
-    text-decoration: none;
-}
-
-.headerAlto .btnHeaderStyle{
-    width: fit-content;
-    margin-top: 1vh;
+.headerAlto .btnHeaderStyle {
+  text-decoration: none;
 }
 
+.headerAlto .btnHeaderStyle {
+  width: fit-content;
+  margin-top: 1vh;
+}
 
 @media only screen and (max-width: 992px) {
-    .img-cover{
-        clip-path: url(#mask-image-mobile);
-        
-    }
-    .rowGrande{
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
+  .img-cover {
+    clip-path: url(#mask-image-mobile);
+  }
+  .rowGrande {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .logoDiv {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .logoImg {
+    width: 50%;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  .subtitle {
+    line-height: 1.75;
+    font-size: 1.125rem;
+  }
+  .containerHeader {
+    margin-top: 6vh;
+  }
 
-    }
-    .logoDiv{
-        background-color: white;
-        position: fixed;
-        left: 0;
-        top: 0;
-    }
-    .logoImg{
-        width: 50%;
-    }
-    h1{
-        font-size: 2.25rem;
-    }
-    .subtitle {
-        line-height: 1.75;
-        font-size: 1.125rem;
-    }
-    .containerHeader{
-        margin-top: 6vh;
-    }
-
-    .headerAlto .card{
-        padding: 1.25rem;
-    }
-    .headerAlto .btnHeaderStyle{
-        margin: auto;
-        margin-bottom: 2vh;
-    }
-    .subtitle b{
-        line-height: 1.25;
-    }
-    .headerAlto{
-        padding-bottom: 16vh;
-    }
-    .img-cover{
-        height: 50%;
-    }
-    .headerAlto path{
-        fill: #ff5766;
-    }
+  .headerAlto .card {
+    padding: 1.25rem;
+  }
+  .headerAlto .btnHeaderStyle {
+    margin: auto;
+    margin-bottom: 2vh;
+  }
+  .subtitle b {
+    line-height: 1.25;
+  }
+  .headerAlto {
+    padding-bottom: 16vh;
+  }
+  .img-cover {
+    height: 20%;
+    left: 0;
+    width: 100%;
+    top: auto;
+  }
+  .headerAlto path {
+    fill: #ff5766;
+  }
 }
