@@ -29,11 +29,11 @@ const HeaderAlto = (props) => {
           <div className="col-lg-6 col-12">
             <div class="containerHeader">
               <div class="row rowGrande">
-                <div class="col-12 text-center text-lg-start">
+                <div class="col-12 text-center text-lg-start p-0 m-0">
                   <div class="col-12">
                     <h2 class="fw-bold"></h2>
                     <h1>
-                      GrowPro Meeting <strong>Barcelona</strong>
+                      GrowPro Meeting <strong>Barcelona (Resgistros cerrados)</strong>
                     </h1>
 
                     <div class="subtitle mt-3">
