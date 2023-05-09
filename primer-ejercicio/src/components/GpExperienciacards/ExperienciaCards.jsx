@@ -61,7 +61,8 @@ class ExperienciaCards extends Component {
                     )}
                     {/* Fondo y body */}
                     <div className="cardFondo ancho">
-                      <div className="cardBody">
+                      <div className="cardBody"
+                      >
                         <h5 className="cardTitle">{tarjeta.title}</h5>
                         <p className="precioCard textMedio">
                           <del>8800 AUD</del> | <strong>2640 AUD</strong>
